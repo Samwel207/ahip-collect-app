@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/geoWidgetLauncherFragment"
+        android:name="org.smartregister.fhircore.quest.ui.geowidget.GeoWidgetLauncherFragment">
+        <argument
+            android:name="geoWidgetId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="toolBarHomeNavigation"
+            android:defaultValue="OPEN_DRAWER"
+            app:argType="org.smartregister.fhircore.engine.domain.model.ToolBarHomeNavigation"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="org.smartregister.fhircore.quest.ui.register.RegisterFragment">
+        <argument
+            android:name="screenTitle"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="registerId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="toolBarHomeNavigation"
+            android:defaultValue="OPEN_DRAWER"
+            app:argType="org.smartregister.fhircore.engine.domain.model.ToolBarHomeNavigation"
+            app:nullable="false" />
+        <argument
+            android:name="params"
+            android:defaultValue="@null"
+            app:argType="org.smartregister.fhircore.engine.domain.model.ActionParameter[]"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="org.smartregister.fhircore.quest.ui.profile.ProfileFragment">
+        <argument
+            android:name="profileId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="resourceId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="params"
+            app:argType="org.smartregister.fhircore.engine.domain.model.ActionParameter[]"
+            app:nullable="true" />
+        <argument
+            android:name="resourceConfig"
+            app:argType="org.smartregister.fhircore.engine.domain.model.FhirResourceConfig"
+            app:nullable="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userSettingFragment"
+        android:name="org.smartregister.fhircore.quest.ui.usersetting.UserSettingFragment" />
+
+    <fragment
+        android:id="@+id/reportIndicatorFragment"
+        android:name="org.smartregister.fhircore.quest.ui.report.indicator.ReportIndicatorFragment">
+        <argument
+            android:name="reportId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/measureReportFragment"
+        android:name="org.smartregister.fhircore.quest.ui.report.measure.MeasureReportFragment">
+        <argument
+            android:name="reportId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="resourceId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInsightScreenFragment"
+        android:name="org.smartregister.fhircore.quest.ui.usersetting.UserInsightScreenFragment"
+        android:label="fragment_user_insight_screen" />
+
+    <dialog
+        android:id="@+id/multiSelectBottomSheetFragment"
+        android:name="org.smartregister.fhircore.quest.ui.multiselect.MultiSelectBottomSheetFragment">
+        <argument
+            android:name="screenTitle"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="multiSelectViewConfig"
+            app:argType="org.smartregister.fhircore.engine.domain.model.MultiSelectViewConfig"
+            app:nullable="true" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/summaryBottomSheetFragment"
+        android:name="org.smartregister.fhircore.quest.ui.bottomsheet.SummaryBottomSheetFragment">
+
+    </dialog>
+    <dialog
+        android:id="@+id/questionnaireDraftDialogFragment"
+        android:name="org.smartregister.fhircore.quest.ui.questionnaire.QuestionnaireDraftDialogFragment">
+        <argument
+            android:name="questionnaireConfig"
+            app:argType="org.smartregister.fhircore.engine.configuration.QuestionnaireConfig"
+            app:nullable="true" />
+    </dialog>
+</navigation>

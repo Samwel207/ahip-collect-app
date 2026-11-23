@@ -1,0 +1,5014 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "ahip-t1-cpp-provider",
+  "name": "ahip_t1_cpp_provider",
+  "title": "Tool 1: CPP Provider Assessment",
+  "status": "active",
+  "subjectType": [
+    "Location"
+  ],
+  "description": "Afya-Tek Phase III Baseline Assessment — TOOL 1: Community Pharmaceutical Premises Dispensers.",
+  "extension": [
+    {
+      "url": "https://smartregister.org/allow-incomplete-submission-when",
+      "valueExpression": {
+        "language": "text/fhirpath",
+        "expression": "repeat(item).where(linkId='collection_mode').answer.value.code = 'record_the_interview_as_audio' and repeat(item).where(linkId='interview_audio_1').answer.exists() and repeat(item).where(linkId='interview_notes').answer.exists()"
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "s1",
+      "text": "Section 1: General Information",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "ahip-study",
+          "text": "Study",
+          "type": "string",
+          "readOnly": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "ahip-assessment",
+          "text": "Assessment",
+          "type": "string",
+          "readOnly": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "collection_mode",
+          "text": "How will you collect this interview?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "answer_the_questions_on_the_phone",
+                "display": "Answer the questions on the phone"
+              },
+              "initialSelected": true
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "record_the_interview_as_audio",
+                "display": "Record the interview as audio"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "cpp_name",
+          "text": "Name of CPP",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "cpp_type",
+          "text": "Type of CPP",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "cpp_registration",
+          "text": "Registration status of the CPP",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "registered_with_a_valid_licence",
+                "display": "Registered with a valid licence"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "registered_but_licence_expired",
+                "display": "Registered, but licence expired"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_registered",
+                "display": "Not registered"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "registration_status_unknown",
+                "display": "Registration status unknown"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "dispenser_registration",
+          "text": "Registration status of the dispenser",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "registered_with_a_valid_practising_licence_permi",
+                "display": "Registered with a valid practising licence/permit, where applicable"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "registered_but_licence_permit_expired",
+                "display": "Registered, but licence/permit expired"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_registered",
+                "display": "Not registered"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "registration_status_unknown",
+                "display": "Registration status unknown"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "cpp_operations",
+          "text": "Nature of CPP operations",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "retail",
+                "display": "Retail"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "wholesaler",
+                "display": "Wholesaler"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "both_retail_and_wholesale",
+                "display": "Both retail and wholesale"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "respondent_title",
+          "text": "Respondent's professional title/designation",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "owner",
+                "display": "Owner"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "addo_dispenser",
+                "display": "ADDO Dispenser"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "pharmacist",
+                "display": "Pharmacist"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "pharmaceutical_technician",
+                "display": "Pharmaceutical Technician"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "pharmaceutical_dispenser",
+                "display": "Pharmaceutical Dispenser"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "medicine_dispenser",
+                "display": "Medicine Dispenser"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "respondent_title_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "respondent_title",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "years_operation",
+          "text": "Years of operation of the premises",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "below_one_year",
+                "display": "Below one year"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1_2_years",
+                "display": "1 - 2 Years"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3_4_years",
+                "display": "3 - 4 Years"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "above_4_years",
+                "display": "Above 4 years"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "years_working",
+          "text": "How long have you been working at this CPP?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "below_one_year",
+                "display": "Below one year"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1_2_years",
+                "display": "1 - 2 Years"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3_4_years",
+                "display": "3 - 4 Years"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "above_4_years",
+                "display": "Above 4 years"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "region",
+          "text": "Region",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "dodoma",
+                "display": "Dodoma"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "tanga",
+                "display": "Tanga"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "ruvuma",
+                "display": "Ruvuma"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "njombe",
+                "display": "Njombe"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "pwani",
+                "display": "Pwani"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "mbeya",
+                "display": "Mbeya"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "tabora",
+                "display": "Tabora"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "lindi",
+                "display": "Lindi"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "other",
+                "display": "Other (not in list)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "region_other",
+          "text": "Region name (not in the list)",
+          "type": "string",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "region",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:region",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "council",
+          "text": "District / Council name",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "chemba_dc",
+                "display": "Chemba DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "tanga_cc",
+                "display": "Tanga CC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "pangani_dc",
+                "display": "Pangani DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "handeni_dc",
+                "display": "Handeni DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "songea_mc",
+                "display": "Songea MC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "songea_dc",
+                "display": "Songea DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "njombe_tc",
+                "display": "Njombe TC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "makambako_dc",
+                "display": "Makambako DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "kibaha_mc",
+                "display": "Kibaha MC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "rufiji_dc",
+                "display": "Rufiji DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "mbeya_cc",
+                "display": "Mbeya CC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "busokelo_dc",
+                "display": "Busokelo DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "nzega_dc",
+                "display": "Nzega DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "mtama_dc",
+                "display": "Mtama DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "other",
+                "display": "Other (not in list)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "chemba_dc",
+                    "display": "Chemba DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'dodoma'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "tanga_cc",
+                    "display": "Tanga CC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "pangani_dc",
+                    "display": "Pangani DC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "handeni_dc",
+                    "display": "Handeni DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'tanga'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "songea_mc",
+                    "display": "Songea MC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "songea_dc",
+                    "display": "Songea DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'ruvuma'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "njombe_tc",
+                    "display": "Njombe TC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "makambako_dc",
+                    "display": "Makambako DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'njombe'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "kibaha_mc",
+                    "display": "Kibaha MC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "rufiji_dc",
+                    "display": "Rufiji DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'pwani'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "mbeya_cc",
+                    "display": "Mbeya CC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "busokelo_dc",
+                    "display": "Busokelo DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'mbeya'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "nzega_dc",
+                    "display": "Nzega DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'tabora'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "mtama_dc",
+                    "display": "Mtama DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'lindi'"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "council_other",
+          "text": "District / council name (not in the list)",
+          "type": "string",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "council",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:council",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "gps",
+          "text": "GPS reading",
+          "type": "group",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "location-widget"
+                  }
+                ]
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "gps_latitude",
+              "text": "Latitude",
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "https://github.com/google/android-fhir/StructureDefinition/gps-coordinate",
+                  "valueString": "latitude"
+                }
+              ]
+            },
+            {
+              "linkId": "gps_longitude",
+              "text": "Longitude",
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "https://github.com/google/android-fhir/StructureDefinition/gps-coordinate",
+                  "valueString": "longitude"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "interviewer",
+          "text": "Name of the interviewer",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "interviewee_phone",
+          "text": "Phone number of the interviewee (+255)",
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/regex",
+              "valueString": "^(\\+?255|0)[0-9]{9}$"
+            }
+          ]
+        },
+        {
+          "linkId": "collection_date",
+          "text": "Date of data collection",
+          "type": "date",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "interview_recording",
+      "text": "Interview recording",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "interview_recording_note",
+          "text": "Record the interview below. If it is interrupted, record the rest as Part 2. Then write what the respondent said in the box under the recording. The questions on the next pages are optional when you record: answer any you can, then submit.",
+          "type": "display"
+        },
+        {
+          "linkId": "interview_audio_1",
+          "text": "Interview recording (part 1)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "audio-recorder"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "audio/mp4"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 47185920
+            },
+            {
+              "url": "https://smartregister.org/audio-max-duration-minutes",
+              "valueInteger": 45
+            }
+          ],
+          "required": true
+        },
+        {
+          "linkId": "interview_audio_2",
+          "text": "Interview recording (part 2, optional)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "audio-recorder"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "audio/mp4"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 47185920
+            },
+            {
+              "url": "https://smartregister.org/audio-max-duration-minutes",
+              "valueInteger": 45
+            }
+          ]
+        },
+        {
+          "linkId": "interview_notes",
+          "text": "Summary of the recorded interview: write what the respondent said",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "collection_mode",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:ahip:answer",
+            "code": "record_the_interview_as_audio"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "s2",
+      "text": "Section 2: Current Service Delivery and Referral Practices",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "q01",
+          "prefix": "1.",
+          "text": "Does this CPP currently provide any health screening services?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q02",
+          "prefix": "2.",
+          "text": "If Yes, which screening services are currently provided? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "q01",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes"
+              }
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "tb_symptom_screening",
+                "display": "TB symptom screening"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "hiv_risk_assessment",
+                "display": "HIV risk assessment"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "maternal_health_screening",
+                "display": "Maternal Health Screening"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "child_health_screening",
+                "display": "Child health Screening"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "adolescent_health_screening",
+                "display": "Adolescent health screening"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "mental_health_screening",
+                "display": "Mental health screening"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "ncds_screening",
+                "display": "NCDs Screening"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "none",
+                "display": "None"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q02_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q02",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q03",
+          "prefix": "3.",
+          "text": "Does this CPP currently use any digital tool to conduct or document screening services?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q04",
+          "prefix": "4.",
+          "text": "During the last 30 days, approximately, how many clients were referred from this CPP to health facilities? (Number of clients referred)",
+          "type": "integer",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            }
+          ]
+        },
+        {
+          "linkId": "q05",
+          "prefix": "5.",
+          "text": "What method is mainly used to refer clients?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "written_referral_note",
+                "display": "Written referral note"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "phone_call",
+                "display": "Phone call"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "verbal_advice",
+                "display": "Verbal advice"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "digital_platform",
+                "display": "Digital platform"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q05_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q05",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q06",
+          "prefix": "6.",
+          "text": "Does this premise receive feedback from health facilities after referral?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "always",
+                "display": "Always"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "often",
+                "display": "Often"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sometimes",
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "rarely",
+                "display": "Rarely"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "never",
+                "display": "Never"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q07",
+          "prefix": "7.",
+          "text": "Does this premise follow up referred clients?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "always",
+                "display": "Always"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "often",
+                "display": "Often"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sometimes",
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "rarely",
+                "display": "Rarely"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "never",
+                "display": "Never"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q08",
+          "prefix": "8.",
+          "text": "What is the approximate monthly airtime cost used for client communication and referrals (excluding internet)? (TZS)",
+          "type": "decimal",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueDecimal": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "s3",
+      "text": "Section 3: Coordination among the Healthcare Providers",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "q09",
+          "prefix": "9.",
+          "text": "Does this CPP currently collaborate with Community Health Workers (CHWs) operating within its catchment area?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q10",
+          "prefix": "10.",
+          "text": "Does this CPP currently coordinate with nearby health facilities regarding client referrals and service delivery?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "i_dont_know",
+                "display": "I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q11",
+          "prefix": "11.",
+          "text": "How frequently does this CPP communicate with CHWs regarding client linkage, referrals, and service coordination?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "daily",
+                "display": "Daily"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "weekly",
+                "display": "Weekly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "monthly",
+                "display": "Monthly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "occasionally",
+                "display": "Occasionally"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "never",
+                "display": "Never"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q12",
+          "prefix": "12.",
+          "text": "How frequently does this CPP communicate with health facilities regarding client referrals and service delivery?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "daily",
+                "display": "Daily"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "weekly",
+                "display": "Weekly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "monthly",
+                "display": "Monthly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "occasionally",
+                "display": "Occasionally"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "never",
+                "display": "Never"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q13",
+          "prefix": "13.",
+          "text": "What forms of collaboration currently exist between this CPP and CHWs? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "receiving_clients_linked_to_the_cpp_by_chws",
+                "display": "Receiving clients linked to the CPP by CHWs"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sharing_information_on_clients_requiring_healthc",
+                "display": "Sharing information on clients requiring healthcare services"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "coordinating_client_referrals_to_health_faciliti",
+                "display": "Coordinating client referrals to health facilities"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "providing_medicines_and_health_commodities_to_cl",
+                "display": "Providing medicines and health commodities to clients linked by CHWs"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "managing_minor_ailments_among_clients_referred_b",
+                "display": "Managing minor ailments among clients referred by CHWs"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sharing_information_on_referral_outcomes",
+                "display": "Sharing information on referral outcomes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "linking_clients_for_registration_to_chw",
+                "display": "Linking clients for registration to CHW"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no_collaboration",
+                "display": "No collaboration"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q13_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q13",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q14",
+          "prefix": "14.",
+          "text": "What forms of coordination currently exist between this CPP and health facilities? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "referring_clients_to_health_facilities_for_furth",
+                "display": "Referring clients to health facilities for further management"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "receiving_clients_referred_from_health_facilitie",
+                "display": "Receiving clients referred from health facilities"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sharing_client_referral_information",
+                "display": "Sharing client referral information"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "receiving_feedback_on_referred_clients",
+                "display": "Receiving feedback on referred clients"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "dispensing_prescribed_medicines_to_clients_refer",
+                "display": "Dispensing prescribed medicines to clients referred from health facilities"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no_coordination",
+                "display": "No coordination"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q14_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q14",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q15",
+          "prefix": "15.",
+          "text": "What are the main challenges affecting coordination between this CPP, CHWs, and health facilities? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "poor_communication_between_healthcare_providers",
+                "display": "Poor communication between healthcare providers"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_aware_of_existence_of_chw_within_their_catch",
+                "display": "Not aware of existence of CHW within their catchment area"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "delayed_or_missing_referral_feedback",
+                "display": "Delayed or missing referral feedback"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "limited_information_sharing",
+                "display": "Limited information sharing"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "lack_of_clear_referral_procedures",
+                "display": "Lack of clear referral procedures"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "limited_coordination_mechanisms",
+                "display": "Limited coordination mechanisms"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q15_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q15",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "s4",
+      "text": "Section 4: Key Understanding of the Symptoms and Disease",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "q16",
+          "prefix": "16.",
+          "text": "Based on your understanding, mention the signs of Tuberculosis (TB)",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "persistent_cough",
+                "display": "Persistent cough (two weeks or more)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sputum_mixed_with_blood",
+                "display": "Sputum mixed with blood"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "fever",
+                "display": "Fever"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "weight_loss",
+                "display": "Weight loss"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "excessive_night_sweats",
+                "display": "Excessive night sweats"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q16_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q16",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q17",
+          "prefix": "17.",
+          "text": "Based on your understanding, mention the signs of Diabetes",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "frequent_severe_thirst",
+                "display": "Frequent/severe thirst"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "drinking_water_more_often_than_usual",
+                "display": "Drinking water more often than usual"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "frequent_urination",
+                "display": "Frequent urination"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "severe_hunger",
+                "display": "Severe hunger"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "numbness_in_the_feet",
+                "display": "Numbness in the feet"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q17_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q17",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q18",
+          "prefix": "18.",
+          "text": "Based on your understanding, mention the signs of Hypertension",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "frequent_headache",
+                "display": "Frequent headache"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "blurred_vision_dizziness",
+                "display": "Blurred vision/dizziness"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "pounding_or_fast_heartbeat",
+                "display": "Pounding or fast heartbeat"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "nosebleeds",
+                "display": "Nosebleeds"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "chest_pain_difficulty_breathing",
+                "display": "Chest pain/difficulty breathing"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "frequent_fatigue_swollen_legs",
+                "display": "Frequent fatigue/swollen legs"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q18_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q18",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q19",
+          "prefix": "19.",
+          "text": "Based on your understanding, what are the common signs and symptoms that may indicate a mental health condition? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "persistent_sadness_or_loss_of_interest_in_usual",
+                "display": "Persistent sadness or loss of interest in usual activities"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "excessive_fear_anxiety_or_worry",
+                "display": "Excessive fear, anxiety, or worry"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "unusual_behaviour_severe_confusion_or_hearing_vo",
+                "display": "Unusual behaviour, severe confusion, or hearing voices that others do not hear"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "significant_changes_in_sleeping_patterns_appetit",
+                "display": "Significant changes in sleeping patterns, appetite, or daily functioning"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "thoughts_or_expressions_of_self_harm_or_suicide",
+                "display": "Thoughts or expressions of self-harm or suicide"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "none",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q19_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q19",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q20",
+          "prefix": "20.",
+          "text": "Based on your understanding, mention danger signs for pregnant women",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "fever_and_being_too_weak_to_get_out_of_bed",
+                "display": "Fever and being too weak to get out of bed"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "vaginal_bleeding",
+                "display": "Vaginal bleeding"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "severe_headache",
+                "display": "Severe headache"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "liquid_leaking_from_vagina",
+                "display": "Liquid leaking from vagina"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "pallor",
+                "display": "Pallor (palms, tongue and conjunctiva)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "blurred_vision",
+                "display": "Blurred vision"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "convulsions",
+                "display": "Convulsions"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "fatigue_lethargy",
+                "display": "Fatigue/Lethargy"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "dizziness",
+                "display": "Dizziness"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "signs_of_malaria",
+                "display": "Signs of malaria (feeling cold, fever, vomiting)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "difficult_breathing",
+                "display": "Difficult breathing"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "loss_of_consciousness",
+                "display": "Loss of consciousness"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "swelling_of_face_arms_legs_fingers_hands_and_fee",
+                "display": "Swelling of face, arms, legs, fingers, hands and feet"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "early_labour_pains_before_9_months",
+                "display": "Early labour pains before 9 months"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "discoloured_or_watery_liquid_vaginal_discharge_w",
+                "display": "Discoloured or watery liquid vaginal discharge with a bad smell"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no_movement_unusual_movement_of_the_child_in_the",
+                "display": "No movement/unusual movement of the child in the womb"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "fgm",
+                "display": "FGM"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "none",
+                "display": "None"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q21",
+          "prefix": "21.",
+          "text": "Based on your understanding, mention danger signs for postpartum women",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "fever",
+                "display": "Fever"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "bleeding_vaginally",
+                "display": "Bleeding vaginally"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "severe_headache",
+                "display": "Severe headache"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "convulsions",
+                "display": "Convulsions"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "difficult_breathing",
+                "display": "Difficult breathing"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "severe_pains_in_the_muscles_of_the_foot",
+                "display": "Severe pains in the muscles of the foot"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "unusual_behaviour",
+                "display": "Unusual behaviour (stress, confusion)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "engorged_breast_cracked_nipples",
+                "display": "Engorged breast, cracked nipples"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "severe_abdominal_pain",
+                "display": "Severe abdominal pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "discoloured_or_watery_liquid_vaginal_discharge_w",
+                "display": "Discoloured or watery liquid vaginal discharge with a bad smell"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "blurred_vision",
+                "display": "Blurred vision"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "loss_of_consciousness",
+                "display": "Loss of consciousness"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "urinates_a_little_or_urine_leakage",
+                "display": "Urinates a little or urine leakage"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "severe_pain_in_the_genitalia",
+                "display": "Severe pain in the genitalia"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "pallor",
+                "display": "Pallor (palms, tongue and conjunctiva)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "dizziness",
+                "display": "Dizziness"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "exhaustion",
+                "display": "Exhaustion (fatigue, lethargy)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "oedema_of_face_hands_or_generalized_oedema",
+                "display": "Oedema of face, hands or generalized oedema"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "none",
+                "display": "None"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q22",
+          "prefix": "22.",
+          "text": "Based on your understanding, mention danger signs for children under 5",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "vomits_everything",
+                "display": "Vomits everything"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "high_fever_or_high_temperature",
+                "display": "High fever or high temperature"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "fast_breathing",
+                "display": "Fast breathing"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "difficulty_breathing",
+                "display": "Difficulty breathing"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "unable_to_breastfeed_eat_or_drink",
+                "display": "Unable to breastfeed, eat or drink"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "convulsions",
+                "display": "Convulsions"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "has_cold_or_low_temperature",
+                "display": "Has cold or low temperature"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "diarrhoea",
+                "display": "Diarrhoea (more than 10 loose, watery stools in 24 hours)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "bloody_diarrhoea",
+                "display": "Bloody diarrhoea"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "child_is_lethargic_or_unconscious",
+                "display": "Child is lethargic or unconscious"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "none",
+                "display": "None"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q23",
+          "prefix": "23.",
+          "text": "Based on your understanding, what are top adolescent health seeking behaviours at the CPP?",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "family_planning",
+                "display": "Family planning (pills, condoms, etc.)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sexually_transmitted_infections",
+                "display": "Sexually transmitted infections"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "discomforts_associated_with_menstruation",
+                "display": "Discomforts associated with menstruation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q23_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q23",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "s5",
+      "text": "Section 5: Digital Health Readiness",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "q24",
+          "prefix": "24.",
+          "text": "Is the smartphone or tablet currently available at this CPP functional and suitable for routine digital service delivery?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes_fully_functional",
+                "display": "Yes, fully functional"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "partially_functional",
+                "display": "Partially functional"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_functional",
+                "display": "Not functional"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no_device_available",
+                "display": "No device available"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q25",
+          "prefix": "25.",
+          "text": "Have you ever received formal training on the use of digital health systems?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q26",
+          "prefix": "26.",
+          "text": "How confident are you in using a smartphone or tablet to record client information and manage digital referrals?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_confident_at_all",
+                "display": "Not confident at all"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "slightly_confident",
+                "display": "Slightly confident"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "moderately_confident",
+                "display": "Moderately confident"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "very_confident",
+                "display": "Very confident"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "extremely_confident",
+                "display": "Extremely confident"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q27",
+          "prefix": "27.",
+          "text": "Are you willing to use your device to provide services for the Afya-Tek program?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q28",
+          "prefix": "28.",
+          "text": "How reliable is internet connectivity at this CPP for routine digital service delivery?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "always_available",
+                "display": "Always available"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sometimes_available",
+                "display": "Sometimes available"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_available",
+                "display": "Not available"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q29",
+          "prefix": "29.",
+          "text": "Which mobile phone network do you use at your premises?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "vodacom",
+                "display": "Vodacom"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "airtel",
+                "display": "Airtel"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "halotel",
+                "display": "Halotel"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yas_tigo",
+                "display": "YAS / TIGO"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "ttcl",
+                "display": "TTCL"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "zantel",
+                "display": "Zantel"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q29_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q29",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q30",
+          "prefix": "30.",
+          "text": "What is the approximate monthly internet cost? (Estimate, TZS)",
+          "type": "decimal",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueDecimal": 0
+            }
+          ]
+        },
+        {
+          "linkId": "q31",
+          "prefix": "31.",
+          "text": "Is electricity available at this CPP?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "available",
+                "display": "Available"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_available",
+                "display": "Not available"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q32",
+          "prefix": "32.",
+          "text": "If not, what other alternative power sources do you use to power/charge your premises and devices?",
+          "type": "choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "q31",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_available"
+              }
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "solar_energy",
+                "display": "Solar energy"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "batteries",
+                "display": "Batteries"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "generator",
+                "display": "Generator"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q32_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q32",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q33",
+          "prefix": "33.",
+          "text": "Are you currently using a digital health system in providing health services at your CPP?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q34",
+          "prefix": "34.",
+          "text": "If yes, which digital health system are you using?",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q33",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q34_audio",
+          "text": "Audio recording of the answer (optional)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "audio-recorder"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "audio/mp4"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 15728640
+            },
+            {
+              "url": "https://smartregister.org/audio-max-duration-minutes",
+              "valueInteger": 5
+            }
+          ],
+          "enableWhen": [
+            {
+              "question": "q33",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q35",
+          "prefix": "35.",
+          "text": "How would you rate your ability to use a smartphone or tablet for work?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "very_poor",
+                "display": "Very poor"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "poor",
+                "display": "Poor"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "fair",
+                "display": "Fair"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "good",
+                "display": "Good"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "very_good",
+                "display": "Very good"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "i_dont_know",
+                "display": "I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q36",
+          "prefix": "36.",
+          "text": "What suggestions do you have that we can add to the Afya-Tek platform that will motivate you to use the Afya-Tek digital system?",
+          "type": "text"
+        },
+        {
+          "linkId": "q36_audio",
+          "text": "Audio recording of the answer (optional)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "audio-recorder"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "audio/mp4"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 15728640
+            },
+            {
+              "url": "https://smartregister.org/audio-max-duration-minutes",
+              "valueInteger": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "s6",
+      "text": "Section 6: Willingness to Implement Afya-Tek",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "s6_note",
+          "text": "Participants must be informed about the Afya-Tek model before they are asked these questions. Rate each statement: 1 = Strongly disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly agree, 6 = I don't know.",
+          "type": "display"
+        },
+        {
+          "linkId": "q37",
+          "prefix": "37.",
+          "text": "This CPP is willing to participate in the implementation of the Afya-Tek model.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q38",
+          "prefix": "38.",
+          "text": "I am willing to use the UCS–CPP platform as part of my routine service delivery responsibilities.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q39",
+          "prefix": "39.",
+          "text": "I am confident that I can learn how to use the UCS–CPP platform with appropriate training.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q40",
+          "prefix": "40.",
+          "text": "This CPP is willing to collaborate with Community Health Workers (CHWs) to improve client linkage and referral coordination.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q41",
+          "prefix": "41.",
+          "text": "This CPP is willing to collaborate with health facilities to improve referral coordination and continuity of care.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q42",
+          "prefix": "42.",
+          "text": "Management at this CPP would support the introduction and routine use of the UCS–CPP platform.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q43",
+          "prefix": "43.",
+          "text": "Afya-Tek activities can be integrated into the routine service delivery practices of this CPP.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q44",
+          "prefix": "44.",
+          "text": "I am willing to participate in training on the UCS–CPP platform and its functionalities.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "s7",
+      "text": "Section 7: Perceived Usefulness and Acceptability",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "s7_note",
+          "text": "Rate each statement: 1 = Strongly disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly agree, 6 = I don't know.",
+          "type": "display"
+        },
+        {
+          "linkId": "q45",
+          "prefix": "45.",
+          "text": "The UCS–CPP platform could improve referral coordination between CPPs and health facilities.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q46",
+          "prefix": "46.",
+          "text": "The UCS–CPP platform could improve communication between CPP providers and healthcare workers.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q47",
+          "prefix": "47.",
+          "text": "The UCS–CPP platform could improve the sharing of referral information to support client follow-up by CHWs and health facilities.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q48",
+          "prefix": "48.",
+          "text": "The UCS–CPP platform could improve continuity of care for clients referred to health facilities.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q49",
+          "prefix": "49.",
+          "text": "The UCS–CPP platform could reduce delays in documenting and managing client referrals.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q50",
+          "prefix": "50.",
+          "text": "The UCS–CPP platform could improve the efficiency of routine healthcare service delivery at this CPP.",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "1",
+                "display": "1 - Strongly disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "2",
+                "display": "2 - Disagree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "3",
+                "display": "3 - Neutral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "4",
+                "display": "4 - Agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "5",
+                "display": "5 - Strongly agree"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "6",
+                "display": "6 - I don't know"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "s8",
+      "text": "Section 8: Business Management Practices",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "q51",
+          "prefix": "51.",
+          "text": "Does this CPP currently use any business management tools to support its daily operations?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q52",
+          "prefix": "52.",
+          "text": "What types of business management tools are currently used at this CPP? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "q51",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes"
+              }
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "digital_business_management_system",
+                "display": "Digital business management system"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "manual_recordkeeping_books",
+                "display": "Manual recordkeeping books"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "spreadsheet_applications",
+                "display": "Spreadsheet applications (e.g., Excel)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "mobile_money_applications",
+                "display": "Mobile money applications"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q52_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q52",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q53",
+          "prefix": "53.",
+          "text": "If this CPP uses a digital business management system, which functions does it support? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "q52",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "digital_business_management_system"
+              }
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "stock_and_inventory_management",
+                "display": "Stock and inventory management"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "recording_medicine_purchases",
+                "display": "Recording medicine purchases"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "recording_sales_transactions",
+                "display": "Recording sales transactions"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "financial_reporting",
+                "display": "Financial reporting"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "business_performance_monitoring",
+                "display": "Business performance monitoring"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q53_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q53",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q54",
+          "prefix": "54.",
+          "text": "How frequently are medicine stock records updated at this CPP?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "daily",
+                "display": "Daily"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "weekly",
+                "display": "Weekly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "monthly",
+                "display": "Monthly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "only_when_needed",
+                "display": "Only when needed"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "never",
+                "display": "Never"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q55",
+          "prefix": "55.",
+          "text": "How frequently does this CPP review its business performance, including sales, profits, and expenses?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "daily",
+                "display": "Daily"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "weekly",
+                "display": "Weekly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "monthly",
+                "display": "Monthly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "quarterly",
+                "display": "Quarterly"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "annually",
+                "display": "Annually"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "never",
+                "display": "Never"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q56",
+          "prefix": "56.",
+          "text": "Does this CPP prepare financial or business performance reports to support management decision-making?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q57",
+          "prefix": "57.",
+          "text": "How frequently does this CPP experience stock-outs of commonly requested essential medicines?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "very_frequently",
+                "display": "Very frequently"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "frequently",
+                "display": "Frequently"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "sometimes",
+                "display": "Sometimes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "rarely",
+                "display": "Rarely"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "never",
+                "display": "Never"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q58",
+          "prefix": "58.",
+          "text": "What are the main challenges affecting business management at this CPP? (Select all that apply)",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "inadequate_stock_management",
+                "display": "Inadequate stock management"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "limited_financial_recordkeeping_skills",
+                "display": "Limited financial recordkeeping skills"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "lack_of_digital_business_management_tools",
+                "display": "Lack of digital business management tools"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "limited_access_to_business_management_training",
+                "display": "Limited access to business management training"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "inadequate_working_capital",
+                "display": "Inadequate working capital"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "limited_access_to_reliable_sales_and_inventory_i",
+                "display": "Limited access to reliable sales and inventory information"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no_challenges_experienced",
+                "display": "No challenges experienced"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other",
+                "display": "Other (specify)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q58_other",
+          "text": "Other — please specify",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "q58",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "q59",
+          "prefix": "59.",
+          "text": "Would this CPP be willing to use a digital business management tool for stock management, sales recording, and financial reporting?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "no",
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "not_sure",
+                "display": "Not sure"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "photos",
+      "text": "Photos",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "photos_note",
+          "text": "Take a photo of the premises / facility (e.g. the signboard or the front of the building). Add a second photo if useful.",
+          "type": "display"
+        },
+        {
+          "linkId": "photo_1",
+          "text": "Photo 1",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/jpeg"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/png"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 10485760
+            }
+          ]
+        },
+        {
+          "linkId": "photo_2",
+          "text": "Photo 2 (optional)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/jpeg"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/png"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 10485760
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  AHIP restyle: a large photo preview with the file name and a Delete button underneath.
+  The root must stay a ConstraintLayout: the form library casts it.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/photo_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/cd_photo_preview"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/AhipRoundedImage" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_thumbnail" />
+
+    <TextView
+        android:id="@+id/photo_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:textColor="#5B6275"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/photo_delete"
+        app:layout_constraintEnd_toStartOf="@id/photo_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/photo_delete" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/photo_delete"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/ahip_delete"
+        android:textAllCaps="false"
+        android:textColor="#C62828"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_thumbnail" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Branded sign-in page (BrandedLoginPage): AHIP logo, card, green button, green/purple waves. -->
+    <bool name="login_branded">true</bool>
+    <color name="login_title">@color/ahip_navy</color>
+    <color name="login_accent">@color/ahip_purple</color>
+    <string name="login_branded_hint">Use the username and password from your AHIP Manage invitation</string>
+    <string name="login_branded_subtitle" translatable="false">Digital Data Collection for Afya-Tek Phase III</string>
+</resources>

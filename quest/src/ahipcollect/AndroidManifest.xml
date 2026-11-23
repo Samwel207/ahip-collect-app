@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <!-- AHIP Collect opens on its own "Get Started" screen instead of AppSettingActivity. -->
+        <activity
+            android:name="org.smartregister.fhircore.quest.ahip.AhipWelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="org.smartregister.fhircore.quest.ui.appsetting.AppSettingActivity"
+            android:exported="false"
+            tools:node="replace" />
+
+        <!-- Replaces AppMainActivity as the screen shown after login (see homeScreenIntent()). -->
+        <activity
+            android:name="org.smartregister.fhircore.quest.ahip.AhipCollectActivity"
+            android:exported="false"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="org.smartregister.fhircore.quest.action.OPEN_HOME_SCREEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

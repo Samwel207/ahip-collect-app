@@ -1,0 +1,1515 @@
+Configuration on demand is an incubating feature.
+> Task :buildSrc:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :buildSrc:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :buildSrc:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :buildSrc:compilePluginsBlocks UP-TO-DATE
+> Task :buildSrc:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :buildSrc:generateScriptPluginAdapters UP-TO-DATE
+> Task :buildSrc:compileKotlin UP-TO-DATE
+> Task :buildSrc:compileJava NO-SOURCE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:processResources UP-TO-DATE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+
+> Configure project :geowidget
+Passing custom test runner argument android.testInstrumentationRunnerArguments.useTestStorageService from gradle.properties or command line is not compatible with configuration caching. Please specify this argument using android gradle dsl.
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+To keep using this feature, add the following to your module-level build.gradle files:
+    android.buildFeatures.buildConfig = true
+or from Android Studio, click: `Refactor` > `Migrate BuildConfig to Gradle Build Files`.
+WARNING: The option setting 'android.jetifier.ignorelist=jackson-core' is experimental.
+
+> Task :geowidget:dependencies
+
+------------------------------------------------------------
+Project ':geowidget'
+------------------------------------------------------------
+
+debugCompileClasspath - Compile classpath for '/debug'.
+
+> Configure project :engine
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+To keep using this feature, add the following to your module-level build.gradle files:
+    android.buildFeatures.buildConfig = true
+or from Android Studio, click: `Refactor` > `Migrate BuildConfig to Gradle Build Files`.
+WARNING: The option setting 'android.jetifier.ignorelist=jackson-core' is experimental.
+
+> Task :geowidget:dependencies
++--- androidx.databinding:viewbinding:8.6.1 -> 8.9.2
+|    \--- androidx.annotation:annotation:1.0.0 -> 1.9.1
+|         \--- androidx.annotation:annotation-jvm:1.9.1
+|              \--- org.jetbrains.kotlin:kotlin-stdlib:1.9.24 -> 2.1.21
+|                   +--- org.jetbrains:annotations:13.0 -> 23.0.0
+|                   +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0 -> 1.9.20 (c)
+|                   +--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0 -> 1.9.20 (c)
+|                   \--- org.jetbrains.kotlin:kotlin-stdlib-common:2.1.21 (c)
++--- androidx.databinding:databinding-common:8.6.1
++--- androidx.databinding:databinding-runtime:8.6.1
+|    +--- androidx.databinding:databinding-common:8.6.1
+|    +--- androidx.databinding:viewbinding:8.6.1 -> 8.9.2 (*)
+|    \--- androidx.lifecycle:lifecycle-runtime:2.6.1 -> 2.8.7
+|         \--- androidx.lifecycle:lifecycle-runtime-android:2.8.7
+|              +--- androidx.annotation:annotation:1.8.0 -> 1.9.1 (*)
+|              +--- androidx.arch.core:core-common:2.2.0
+|              |    \--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|              +--- androidx.lifecycle:lifecycle-common:2.8.7
+|              |    \--- androidx.lifecycle:lifecycle-common-jvm:2.8.7
+|              |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|              |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|              |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0
+|              |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0
+|              |         |         +--- org.jetbrains:annotations:23.0.0
+|              |         |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0
+|              |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0 (c)
+|              |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0 (c)
+|              |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0 (c)
+|              |         |         \--- org.jetbrains.kotlin:kotlin-stdlib:2.0.0 -> 2.1.21 (*)
+|              |         +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|              |         +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|              |         \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|              +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|              +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0
+|              |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0 (*)
+|              |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0 (*)
+|              |    \--- org.jetbrains.kotlin:kotlin-stdlib:2.0.0 -> 2.1.21 (*)
+|              +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|              \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
++--- androidx.databinding:databinding-adapters:8.6.1
+|    \--- androidx.databinding:databinding-common:8.6.1
++--- androidx.databinding:databinding-ktx:8.6.1
+|    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1 -> 1.9.0 (*)
+|    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.6.1 -> 2.8.7
+|    |    \--- androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7
+|    |         +--- androidx.annotation:annotation:1.8.0 -> 1.9.1 (*)
+|    |         +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (*)
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0 (*)
+|    |         +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |         +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |         \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    +--- androidx.lifecycle:lifecycle-livedata:2.6.1 -> 2.8.7
+|    |    +--- androidx.arch.core:core-runtime:2.2.0
+|    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    \--- androidx.arch.core:core-common:2.2.0 (*)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7
+|    |    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    \--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    +--- androidx.lifecycle:lifecycle-process:2.6.1 -> 2.8.7
+|    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (*)
+|    |    +--- androidx.startup:startup-runtime:1.1.1
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    \--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    +--- androidx.lifecycle:lifecycle-service:2.6.1 -> 2.8.7
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (*)
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    \--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    \--- androidx.lifecycle:lifecycle-viewmodel:2.6.1 -> 2.8.7
+|         \--- androidx.lifecycle:lifecycle-viewmodel-android:2.8.7
+|              +--- androidx.annotation:annotation:1.8.0 -> 1.9.1 (*)
+|              +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|              +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0 (*)
+|              +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|              +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|              +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|              \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib:2.1.20 -> 2.1.21 (*)
++--- org.jetbrains.kotlin:kotlin-parcelize-runtime:2.1.20
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:2.1.20 -> 2.1.21 (*)
+|    \--- org.jetbrains.kotlin:kotlin-android-extensions-runtime:2.1.20
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:2.1.20 -> 2.1.21 (*)
++--- androidx.compose.ui:ui-test-manifest:1.7.7 -> 1.8.3
+|    +--- androidx.activity:activity:1.2.1 -> 1.10.1
+|    |    +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    +--- androidx.core:core-ktx:1.13.0 -> 1.13.1
+|    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    +--- androidx.core:core:1.13.1
+|    |    |    |    +--- androidx.annotation:annotation:1.6.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.annotation:annotation-experimental:1.4.0 -> 1.4.1
+|    |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 -> 2.1.21 (*)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.6.2 -> 2.8.7 (*)
+|    |    |    |    +--- androidx.versionedparcelable:versionedparcelable:1.1.1
+|    |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |    |    \--- androidx.collection:collection:1.0.0 -> 1.5.0
+|    |    |    |    |         \--- androidx.collection:collection-jvm:1.5.0
+|    |    |    |    |              +--- androidx.annotation:annotation:1.9.1 (*)
+|    |    |    |    |              +--- org.jetbrains.kotlin:kotlin-stdlib -> 2.1.21 (*)
+|    |    |    |    |              +--- androidx.collection:collection-ktx:1.5.0 (c)
+|    |    |    |    |              \--- org.jetbrains.kotlin:kotlin-stdlib:1.9.24 -> 2.1.21 (c)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    +--- androidx.core:core-viewtree:1.0.0
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib -> 2.1.21 (*)
+|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (c)
+|    |    +--- androidx.lifecycle:lifecycle-common:2.6.1 -> 2.8.7 (*)
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.6.1 -> 2.8.7 (*)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.6.1 -> 2.8.7 (*)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1 -> 2.8.7
+|    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    +--- androidx.core:core-ktx:1.2.0 -> 1.13.1 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (*)
+|    |    |    +--- androidx.savedstate:savedstate:1.2.1
+|    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.10 -> 2.1.21 (*)
+|    |    |    |    \--- androidx.savedstate:savedstate-ktx:1.2.1 (c)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    +--- androidx.savedstate:savedstate:1.2.1 (*)
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib -> 2.1.21 (*)
+|    |    +--- androidx.activity:activity-compose:1.10.1 (c)
+|    |    +--- androidx.activity:activity-ktx:1.10.1 (c)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (c)
+|    +--- androidx.compose.ui:ui:1.8.3 (c)
+|    +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    +--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    \--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
++--- androidx.fragment:fragment-testing:1.8.5
+|    +--- androidx.fragment:fragment-ktx:1.8.5
+|    |    +--- androidx.activity:activity-ktx:1.8.1 -> 1.10.1
+|    |    |    +--- androidx.activity:activity:1.10.1 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.6.1 -> 2.8.7 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1 -> 2.8.7
+|    |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (*)
+|    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0 (*)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    |    +--- androidx.savedstate:savedstate-ktx:1.2.1
+|    |    |    |    +--- androidx.savedstate:savedstate:1.2.1 (*)
+|    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.10 -> 2.1.21 (*)
+|    |    |    |    \--- androidx.savedstate:savedstate:1.2.1 (c)
+|    |    |    +--- androidx.activity:activity:1.10.1 (c)
+|    |    |    \--- androidx.activity:activity-compose:1.10.1 (c)
+|    |    +--- androidx.collection:collection-ktx:1.1.0 -> 1.5.0
+|    |    |    +--- androidx.collection:collection:1.5.0 (*)
+|    |    |    \--- androidx.collection:collection:1.5.0 (c)
+|    |    +--- androidx.core:core-ktx:1.2.0 -> 1.13.1 (*)
+|    |    +--- androidx.fragment:fragment:1.8.5
+|    |    |    +--- androidx.activity:activity:1.8.1 -> 1.10.1 (*)
+|    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    +--- androidx.annotation:annotation-experimental:1.4.0 -> 1.4.1 (*)
+|    |    |    +--- androidx.collection:collection:1.1.0 -> 1.5.0 (*)
+|    |    |    +--- androidx.core:core-ktx:1.2.0 -> 1.13.1 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.6.1 -> 2.8.7 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.6.1 -> 2.8.7 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.6.1 -> 2.8.7 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1 -> 2.8.7 (*)
+|    |    |    +--- androidx.loader:loader:1.0.0
+|    |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.0.0 -> 2.8.7 (*)
+|    |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel:2.0.0 -> 2.8.7 (*)
+|    |    |    +--- androidx.savedstate:savedstate:1.2.1 (*)
+|    |    |    +--- androidx.viewpager:viewpager:1.0.0
+|    |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    |    \--- androidx.customview:customview:1.0.0 -> 1.1.0
+|    |    |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |         \--- androidx.core:core:1.3.0 -> 1.13.1 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    +--- androidx.fragment:fragment-ktx:1.8.5 (c)
+|    |    |    +--- androidx.fragment:fragment-testing:1.8.5 (c)
+|    |    |    \--- androidx.fragment:fragment-testing-manifest:1.8.5 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1 -> 2.8.7 (*)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1 -> 2.8.7 (*)
+|    |    +--- androidx.savedstate:savedstate-ktx:1.2.1 (*)
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    +--- androidx.fragment:fragment:1.8.5 (c)
+|    |    +--- androidx.fragment:fragment-testing:1.8.5 (c)
+|    |    \--- androidx.fragment:fragment-testing-manifest:1.8.5 (c)
+|    +--- androidx.fragment:fragment-testing-manifest:1.8.5
+|    |    +--- androidx.fragment:fragment-ktx:1.8.5 (*)
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    +--- androidx.fragment:fragment:1.8.5 (c)
+|    |    +--- androidx.fragment:fragment-ktx:1.8.5 (c)
+|    |    \--- androidx.fragment:fragment-testing:1.8.5 (c)
+|    +--- androidx.test:core:1.5.0
+|    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    +--- androidx.test:monitor:1.6.0
+|    |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    |    +--- androidx.test:annotation:1.0.1
+|    |    |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    |    |    \--- androidx.annotation:annotation-experimental:1.1.0 -> 1.4.1 (*)
+|    |    |    \--- androidx.tracing:tracing:1.0.0
+|    |    +--- androidx.test.services:storage:1.4.2
+|    |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    |    +--- androidx.test:monitor:1.6.0 (*)
+|    |    |    +--- com.google.code.findbugs:jsr305:2.0.2 -> 3.0.2
+|    |    |    \--- androidx.test:annotation:1.0.1 (*)
+|    |    +--- androidx.lifecycle:lifecycle-common:2.3.1 -> 2.8.7 (*)
+|    |    +--- androidx.tracing:tracing:1.0.0
+|    |    +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 -> 2.1.21 (*)
+|    |    \--- androidx.concurrent:concurrent-futures:1.1.0
+|    |         +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |         \--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    +--- androidx.fragment:fragment-ktx:1.8.5 (c)
+|    +--- androidx.fragment:fragment-testing-manifest:1.8.5 (c)
+|    \--- androidx.fragment:fragment:1.8.5 (c)
++--- project :engine
+|    +--- androidx.datastore:datastore-preferences:1.1.2
+|    |    \--- androidx.datastore:datastore-preferences-android:1.1.2
+|    |         +--- androidx.datastore:datastore:1.1.2
+|    |         |    \--- androidx.datastore:datastore-android:1.1.2
+|    |         |         +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |         |         +--- androidx.datastore:datastore-core:1.1.2
+|    |         |         |    \--- androidx.datastore:datastore-core-android:1.1.2
+|    |         |         |         +--- androidx.annotation:annotation:1.7.0 -> 1.9.1 (*)
+|    |         |         |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |         |         |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |         |         |         +--- androidx.datastore:datastore:1.1.2 (c)
+|    |         |         |         +--- androidx.datastore:datastore-core-okio:1.1.2 (c)
+|    |         |         |         +--- androidx.datastore:datastore-preferences:1.1.2 (c)
+|    |         |         |         \--- androidx.datastore:datastore-preferences-core:1.1.2 (c)
+|    |         |         +--- androidx.datastore:datastore-core-okio:1.1.2
+|    |         |         |    \--- androidx.datastore:datastore-core-okio-jvm:1.1.2
+|    |         |         |         +--- androidx.datastore:datastore-core:1.1.2 (*)
+|    |         |         |         +--- com.squareup.okio:okio:3.4.0 -> 3.6.0
+|    |         |         |         |    \--- com.squareup.okio:okio-jvm:3.6.0
+|    |         |         |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.10 -> 1.9.20
+|    |         |         |         |         |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.9.20 -> 2.1.21 (*)
+|    |         |         |         |         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.20
+|    |         |         |         |         |         \--- org.jetbrains.kotlin:kotlin-stdlib:1.9.20 -> 2.1.21 (*)
+|    |         |         |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.9.10 -> 2.1.21
+|    |         |         |         |              \--- org.jetbrains.kotlin:kotlin-stdlib:2.1.21 (*)
+|    |         |         |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |         |         |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |         |         |         +--- androidx.datastore:datastore:1.1.2 (c)
+|    |         |         |         +--- androidx.datastore:datastore-core:1.1.2 (c)
+|    |         |         |         +--- androidx.datastore:datastore-preferences:1.1.2 (c)
+|    |         |         |         \--- androidx.datastore:datastore-preferences-core:1.1.2 (c)
+|    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |         |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |         |         +--- androidx.datastore:datastore-core:1.1.2 (c)
+|    |         |         +--- androidx.datastore:datastore-core-okio:1.1.2 (c)
+|    |         |         +--- androidx.datastore:datastore-preferences:1.1.2 (c)
+|    |         |         \--- androidx.datastore:datastore-preferences-core:1.1.2 (c)
+|    |         +--- androidx.datastore:datastore-preferences-core:1.1.2
+|    |         |    \--- androidx.datastore:datastore-preferences-core-jvm:1.1.2
+|    |         |         +--- androidx.datastore:datastore-core:1.1.2 (*)
+|    |         |         +--- androidx.datastore:datastore-core-okio:1.1.2 (*)
+|    |         |         +--- com.squareup.okio:okio:3.4.0 -> 3.6.0 (*)
+|    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |         |         +--- androidx.datastore:datastore:1.1.2 (c)
+|    |         |         +--- androidx.datastore:datastore-core:1.1.2 (c)
+|    |         |         +--- androidx.datastore:datastore-core-okio:1.1.2 (c)
+|    |         |         \--- androidx.datastore:datastore-preferences:1.1.2 (c)
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |         +--- androidx.datastore:datastore:1.1.2 (c)
+|    |         +--- androidx.datastore:datastore-preferences-core:1.1.2 (c)
+|    |         +--- androidx.datastore:datastore-core:1.1.2 (c)
+|    |         \--- androidx.datastore:datastore-core-okio:1.1.2 (c)
+|    +--- androidx.datastore:datastore:1.1.2 (*)
+|    +--- androidx.navigation:navigation-compose:2.8.7 -> 2.8.9
+|    |    +--- androidx.activity:activity-compose:1.8.0 -> 1.10.1
+|    |    |    +--- androidx.activity:activity-ktx:1.10.1 (*)
+|    |    |    +--- androidx.compose.runtime:runtime:1.7.0 -> 1.8.3
+|    |    |    |    \--- androidx.compose.runtime:runtime-android:1.8.3
+|    |    |    |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0 (*)
+|    |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |    |    |         +--- androidx.compose.runtime:runtime-livedata:1.8.3 (c)
+|    |    |    |         \--- androidx.compose.runtime:runtime-saveable:1.8.3 (c)
+|    |    |    +--- androidx.compose.runtime:runtime-saveable:1.7.0 -> 1.8.3
+|    |    |    |    \--- androidx.compose.runtime:runtime-saveable-android:1.8.3
+|    |    |    |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |         +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |    |    |         +--- androidx.compose.runtime:runtime:1.8.3 (c)
+|    |    |    |         \--- androidx.compose.runtime:runtime-livedata:1.8.3 (c)
+|    |    |    +--- androidx.compose.ui:ui:1.0.1 -> 1.8.3
+|    |    |    |    \--- androidx.compose.ui:ui-android:1.8.3
+|    |    |    |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    |         +--- androidx.compose.runtime:runtime-saveable:1.8.3 (*)
+|    |    |    |         +--- androidx.compose.ui:ui-geometry:1.8.3
+|    |    |    |         |    \--- androidx.compose.ui:ui-geometry-android:1.8.3
+|    |    |    |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |         |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |    |    |         |         \--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-graphics:1.8.3
+|    |    |    |         |    \--- androidx.compose.ui:ui-graphics-android:1.8.3
+|    |    |    |         |         +--- androidx.annotation:annotation:1.7.0 -> 1.9.1 (*)
+|    |    |    |         |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    |         |         +--- androidx.compose.ui:ui-unit:1.8.3
+|    |    |    |         |         |    \--- androidx.compose.ui:ui-unit-android:1.8.3
+|    |    |    |         |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |         |         |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-geometry:1.8.3 (*)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    |    |    |         |         |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |    |         |         |         \--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |    |    |         |         \--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-text:1.8.3
+|    |    |    |         |    \--- androidx.compose.ui:ui-text-android:1.8.3
+|    |    |    |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |         |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    |         |         +--- androidx.compose.ui:ui-graphics:1.8.3 (*)
+|    |    |    |         |         +--- androidx.compose.ui:ui-unit:1.8.3 (*)
+|    |    |    |         |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |    |    |         |         \--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-unit:1.8.3 (*)
+|    |    |    |         +--- androidx.compose.ui:ui-util:1.8.3
+|    |    |    |         |    \--- androidx.compose.ui:ui-util-android:1.8.3
+|    |    |    |         |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    |         |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    |    |    |         |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |    |         |         \--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |    |    |         +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7
+|    |    |    |         |    \--- androidx.lifecycle:lifecycle-runtime-compose-android:2.8.7
+|    |    |    |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |         |         +--- androidx.compose.runtime:runtime:1.7.1 -> 1.8.3 (*)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (*)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (*)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    |    |         |         +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    |    |         |         \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    |    |         +--- org.jspecify:jspecify:1.0.0
+|    |    |    |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |    |    |         +--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |    |    |         \--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    |    |    +--- androidx.core:core-ktx:1.13.0 -> 1.13.1 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.6.1 -> 2.8.7 (*)
+|    |    |    +--- androidx.activity:activity:1.10.1 (c)
+|    |    |    \--- androidx.activity:activity-ktx:1.10.1 (c)
+|    |    +--- androidx.compose.animation:animation:1.7.2 -> 1.8.3
+|    |    |    \--- androidx.compose.animation:animation-android:1.8.3
+|    |    |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |         +--- androidx.compose.animation:animation-core:1.8.3
+|    |    |         |    \--- androidx.compose.animation:animation-core-android:1.8.3
+|    |    |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |         |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |    |         |         \--- androidx.compose.animation:animation:1.8.3 (c)
+|    |    |         +--- androidx.compose.foundation:foundation-layout:1.8.3
+|    |    |         |    \--- androidx.compose.foundation:foundation-layout-android:1.8.3
+|    |    |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |         |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |         |         +--- androidx.compose.ui:ui:1.8.3 (*)
+|    |    |         |         \--- androidx.compose.foundation:foundation:1.8.3 (c)
+|    |    |         +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |    |         +--- androidx.compose.ui:ui-geometry:1.8.3 (*)
+|    |    |         \--- androidx.compose.animation:animation-core:1.8.3 (c)
+|    |    +--- androidx.compose.runtime:runtime:1.7.2 -> 1.8.3 (*)
+|    |    +--- androidx.compose.runtime:runtime-saveable:1.7.2 -> 1.8.3 (*)
+|    |    +--- androidx.compose.ui:ui:1.7.2 -> 1.8.3 (*)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2 -> 2.8.7
+|    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.7
+|    |    |         +--- androidx.annotation:annotation:1.8.0 -> 1.9.1 (*)
+|    |    |         +--- androidx.compose.runtime:runtime:1.6.0 -> 1.8.3 (*)
+|    |    |         +--- androidx.compose.ui:ui:1.6.0 -> 1.8.3 (*)
+|    |    |         +--- androidx.lifecycle:lifecycle-common:2.8.7 (*)
+|    |    |         +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (*)
+|    |    |         +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (*)
+|    |    |         +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    |         +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    |         \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9
+|    |    |    +--- androidx.navigation:navigation-common-ktx:2.8.9
+|    |    |    |    +--- androidx.navigation:navigation-common:2.8.9
+|    |    |    |    |    +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.6.2 -> 2.8.7 (*)
+|    |    |    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.6.2 -> 2.8.7 (*)
+|    |    |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2 -> 2.8.7 (*)
+|    |    |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2 -> 2.8.7 (*)
+|    |    |    |    |    +--- androidx.savedstate:savedstate-ktx:1.2.1 (*)
+|    |    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    |    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    |    |    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    |    |    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    |    |    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    |    |    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    |    |    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    |    |    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    |    |    |    \--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-common:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    |    |    \--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-runtime:2.8.9
+|    |    |    |    +--- androidx.activity:activity-ktx:1.7.1 -> 1.10.1 (*)
+|    |    |    |    +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.6.2 -> 2.8.7 (*)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2 -> 2.8.7 (*)
+|    |    |    |    +--- androidx.navigation:navigation-common:2.8.9 (*)
+|    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    |    +--- androidx.navigation:navigation-common:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    |    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    |    |    \--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    |    \--- androidx.navigation:navigation-common:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    \--- androidx.navigation:navigation-common:2.8.9 (c)
+|    +--- androidx.navigation:navigation-fragment-ktx:2.8.7 -> 2.8.9
+|    |    +--- androidx.navigation:navigation-fragment:2.8.9
+|    |    |    +--- androidx.fragment:fragment-ktx:1.6.2 -> 1.8.5 (*)
+|    |    |    +--- androidx.navigation:navigation-runtime:2.8.9 (*)
+|    |    |    +--- androidx.slidingpanelayout:slidingpanelayout:1.2.0
+|    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |    \--- androidx.customview:customview:1.1.0 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    |    \--- androidx.navigation:navigation-common:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (*)
+|    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    \--- androidx.navigation:navigation-common:2.8.9 (c)
+|    +--- androidx.navigation:navigation-ui-ktx:2.8.7 -> 2.8.9
+|    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (*)
+|    |    +--- androidx.navigation:navigation-ui:2.8.9
+|    |    |    +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |    +--- androidx.customview:customview:1.1.0 (*)
+|    |    |    +--- androidx.drawerlayout:drawerlayout:1.1.1
+|    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.core:core:1.2.0 -> 1.13.1 (*)
+|    |    |    |    \--- androidx.customview:customview:1.1.0 (*)
+|    |    |    +--- androidx.navigation:navigation-runtime:2.8.9 (*)
+|    |    |    +--- com.google.android.material:material:1.4.0 -> 1.12.0
+|    |    |    |    +--- androidx.activity:activity:1.8.0 -> 1.10.1 (*)
+|    |    |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.appcompat:appcompat:1.6.1 -> 1.7.0
+|    |    |    |    |    +--- androidx.activity:activity:1.7.0 -> 1.10.1 (*)
+|    |    |    |    |    +--- androidx.annotation:annotation:1.3.0 -> 1.9.1 (*)
+|    |    |    |    |    +--- androidx.appcompat:appcompat-resources:1.7.0
+|    |    |    |    |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    |    |    |    |    +--- androidx.core:core:1.6.0 -> 1.13.1 (*)
+|    |    |    |    |    |    +--- androidx.vectordrawable:vectordrawable:1.1.0
+|    |    |    |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |    |    |    |    +--- androidx.core:core:1.1.0 -> 1.13.1 (*)
+|    |    |    |    |    |    |    \--- androidx.collection:collection:1.1.0 -> 1.5.0 (*)
+|    |    |    |    |    |    +--- androidx.vectordrawable:vectordrawable-animated:1.1.0
+|    |    |    |    |    |    |    +--- androidx.vectordrawable:vectordrawable:1.1.0 (*)
+|    |    |    |    |    |    |    +--- androidx.interpolator:interpolator:1.0.0
+|    |    |    |    |    |    |    |    \--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    |    |    |    \--- androidx.collection:collection:1.1.0 -> 1.5.0 (*)
+|    |    |    |    |    |    \--- androidx.appcompat:appcompat:1.7.0 (c)
+|    |    |    |    |    +--- androidx.core:core:1.13.0 -> 1.13.1 (*)
+|    |    |    |    |    +--- androidx.cursoradapter:cursoradapter:1.0.0
+|    |    |    |    |    |    \--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    |    +--- androidx.drawerlayout:drawerlayout:1.0.0 -> 1.1.1 (*)
+|    |    |    |    |    +--- androidx.fragment:fragment:1.5.4 -> 1.8.5 (*)
+|    |    |    |    |    +--- androidx.savedstate:savedstate:1.2.1 (*)
+|    |    |    |    |    \--- androidx.appcompat:appcompat-resources:1.7.0 (c)
+|    |    |    |    +--- androidx.cardview:cardview:1.0.0
+|    |    |    |    |    \--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.coordinatorlayout:coordinatorlayout:1.1.0
+|    |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |    |    +--- androidx.core:core:1.1.0 -> 1.13.1 (*)
+|    |    |    |    |    +--- androidx.customview:customview:1.0.0 -> 1.1.0 (*)
+|    |    |    |    |    \--- androidx.collection:collection:1.0.0 -> 1.5.0 (*)
+|    |    |    |    +--- androidx.constraintlayout:constraintlayout:2.0.1 -> 2.2.0
+|    |    |    |    +--- androidx.core:core:1.6.0 -> 1.13.1 (*)
+|    |    |    |    +--- androidx.drawerlayout:drawerlayout:1.1.1 (*)
+|    |    |    |    +--- androidx.dynamicanimation:dynamicanimation:1.0.0
+|    |    |    |    |    +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    |    |    +--- androidx.collection:collection:1.0.0 -> 1.5.0 (*)
+|    |    |    |    |    \--- androidx.legacy:legacy-support-core-utils:1.0.0
+|    |    |    |    |         +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    |         +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    |    |         +--- androidx.documentfile:documentfile:1.0.0
+|    |    |    |    |         |    \--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    |         +--- androidx.loader:loader:1.0.0 (*)
+|    |    |    |    |         +--- androidx.localbroadcastmanager:localbroadcastmanager:1.0.0
+|    |    |    |    |         |    \--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    |         \--- androidx.print:print:1.0.0
+|    |    |    |    |              \--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.annotation:annotation-experimental:1.0.0 -> 1.4.1 (*)
+|    |    |    |    +--- androidx.fragment:fragment:1.2.5 -> 1.8.5 (*)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.0.0 -> 2.8.7 (*)
+|    |    |    |    +--- androidx.recyclerview:recyclerview:1.0.0 -> 1.4.0
+|    |    |    |    |    +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |    |    |    +--- androidx.core:core:1.13.0 -> 1.13.1 (*)
+|    |    |    |    |    \--- androidx.customview:customview:1.0.0 -> 1.1.0 (*)
+|    |    |    |    +--- androidx.resourceinspection:resourceinspection-annotation:1.0.1
+|    |    |    |    +--- androidx.transition:transition:1.5.0
+|    |    |    |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.9.1 (*)
+|    |    |    |    |    \--- androidx.core:core:1.13.0 -> 1.13.1 (*)
+|    |    |    |    +--- androidx.vectordrawable:vectordrawable:1.1.0 (*)
+|    |    |    |    \--- androidx.viewpager2:viewpager2:1.0.0 -> 1.1.0-beta02
+|    |    |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.9.1 (*)
+|    |    |    |         +--- androidx.annotation:annotation-experimental:1.3.0 -> 1.4.1 (*)
+|    |    |    |         +--- androidx.fragment:fragment:1.1.0 -> 1.8.5 (*)
+|    |    |    |         \--- androidx.recyclerview:recyclerview:1.3.1-rc01 -> 1.4.0 (*)
+|    |    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    |    +--- androidx.navigation:navigation-ui-ktx:2.8.9 (c)
+|    |    |    \--- androidx.navigation:navigation-common:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-compose:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-fragment:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-fragment-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-runtime-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-ui:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-common-ktx:2.8.9 (c)
+|    |    +--- androidx.navigation:navigation-runtime:2.8.9 (c)
+|    |    \--- androidx.navigation:navigation-common:2.8.9 (c)
+|    +--- androidx.compose.material:material-icons-extended:1.7.7 -> 1.7.8
+|    |    \--- androidx.compose.material:material-icons-extended-android:1.7.8
+|    |         \--- androidx.compose.material:material-icons-core:1.7.8
+|    |              \--- androidx.compose.material:material-icons-core-android:1.7.8
+|    |                   \--- androidx.compose.ui:ui:1.6.0 -> 1.8.3 (*)
+|    +--- androidx.compose.material:material-icons-core:1.7.7 -> 1.7.8 (*)
+|    +--- androidx.activity:activity-compose:1.9.3 -> 1.10.1 (*)
+|    +--- androidx.activity:activity-ktx:1.9.3 -> 1.10.1 (*)
+|    +--- androidx.compose.ui:ui:1.7.7 -> 1.8.3 (*)
+|    +--- androidx.compose.ui:ui-tooling-preview:1.7.7 -> 1.8.3
+|    |    \--- androidx.compose.ui:ui-tooling-preview-android:1.8.3
+|    |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |         +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |         +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |         +--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |         \--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    +--- androidx.constraintlayout:constraintlayout-compose:1.1.0
+|    |    \--- androidx.constraintlayout:constraintlayout-compose-android:1.1.0
+|    |         \--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    +--- androidx.compose.foundation:foundation:1.7.7 -> 1.8.3
+|    |    \--- androidx.compose.foundation:foundation-android:1.8.3
+|    |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |         +--- androidx.collection:collection:1.5.0 (*)
+|    |         +--- androidx.compose.animation:animation:1.8.3 (*)
+|    |         +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |         +--- androidx.compose.ui:ui:1.8.3 (*)
+|    |         \--- androidx.compose.foundation:foundation-layout:1.8.3 (c)
+|    +--- androidx.compose.runtime:runtime-livedata:1.7.7 -> 1.8.3
+|    |    +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |    +--- androidx.lifecycle:lifecycle-livedata:2.6.1 -> 2.8.7 (*)
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.6.1 -> 2.8.7 (*)
+|    |    +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.3 -> 2.8.7 (*)
+|    |    +--- androidx.compose.runtime:runtime:1.8.3 (c)
+|    |    \--- androidx.compose.runtime:runtime-saveable:1.8.3 (c)
+|    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (*)
+|    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (*)
+|    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.8.7
+|    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (*)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (*)
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |    +--- androidx.lifecycle:lifecycle-common:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-process:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime-compose:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-service:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7 (c)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7 (c)
+|    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7 (c)
+|    +--- com.google.accompanist:accompanist-placeholder:0.23.1
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 -> 1.9.20 (*)
+|    +--- com.google.accompanist:accompanist-flowlayout:0.23.1
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10 -> 1.9.20 (*)
+|    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0 (*)
+|    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0 (*)
+|    +--- com.squareup.retrofit2:retrofit:2.9.0
+|    |    \--- com.squareup.okhttp3:okhttp:3.14.9 -> 4.12.0
+|    |         +--- com.squareup.okio:okio:3.6.0 (*)
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.21 -> 1.9.20 (*)
+|    +--- com.squareup.retrofit2:retrofit-mock:2.9.0
+|    |    \--- com.squareup.retrofit2:retrofit:2.9.0 (*)
+|    +--- com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0
+|    |    +--- com.squareup.retrofit2:retrofit:2.6.4 -> 2.9.0 (*)
+|    |    +--- org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.0.0 -> 1.6.3
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.9.22 -> 2.1.21 (*)
+|    |    |    +--- org.jetbrains.kotlinx:kotlinx-serialization-bom:1.6.3
+|    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.6.3 (c)
+|    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3 (c)
+|    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.6.3 (c)
+|    |    |    |    \--- org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3 (c)
+|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.9.22 -> 2.1.21 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.10 -> 2.1.21 (*)
+|    +--- com.squareup.okhttp3:logging-interceptor:4.12.0
+|    |    +--- com.squareup.okhttp3:okhttp:4.12.0 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.21 -> 1.9.20 (*)
+|    +--- com.squareup.okhttp3:okhttp:4.12.0 (*)
+|    +--- androidx.paging:paging-compose:3.3.5
+|    |    \--- androidx.paging:paging-compose-android:3.3.5
+|    |         +--- androidx.compose.foundation:foundation:1.5.0 -> 1.8.3 (*)
+|    |         +--- androidx.compose.runtime:runtime:1.5.0 -> 1.8.3 (*)
+|    |         +--- androidx.paging:paging-common:3.3.5
+|    |         |    \--- androidx.paging:paging-common-android:3.3.5
+|    |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |         |         +--- androidx.arch.core:core-common:2.2.0 (*)
+|    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |         |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    |         |         +--- androidx.paging:paging-common-ktx:3.3.5 (c)
+|    |         |         \--- androidx.paging:paging-runtime:3.3.5 (c)
+|    |         +--- androidx.paging:paging-common:3.3.5 (c)
+|    |         +--- androidx.paging:paging-runtime:3.3.5 (c)
+|    |         +--- androidx.paging:paging-runtime-ktx:3.3.5 (c)
+|    |         \--- androidx.paging:paging-common-ktx:3.3.5 (c)
+|    +--- androidx.paging:paging-runtime-ktx:3.3.5
+|    |    +--- androidx.paging:paging-runtime:3.3.5
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-ktx:2.4.0 -> 2.8.7 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.4.0 -> 2.8.7 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0 -> 2.8.7 (*)
+|    |    |    +--- androidx.paging:paging-common:3.3.5 (*)
+|    |    |    +--- androidx.paging:paging-common-ktx:3.3.5
+|    |    |    |    +--- androidx.paging:paging-common:3.3.5 (*)
+|    |    |    |    +--- androidx.paging:paging-common:3.3.5 (c)
+|    |    |    |    +--- androidx.paging:paging-compose:3.3.5 (c)
+|    |    |    |    +--- androidx.paging:paging-runtime:3.3.5 (c)
+|    |    |    |    \--- androidx.paging:paging-runtime-ktx:3.3.5 (c)
+|    |    |    +--- androidx.recyclerview:recyclerview:1.2.1 -> 1.4.0 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0 (*)
+|    |    |    +--- androidx.paging:paging-common:3.3.5 (c)
+|    |    |    \--- androidx.paging:paging-common-ktx:3.3.5 (c)
+|    |    +--- androidx.paging:paging-compose:3.3.5 (c)
+|    |    +--- androidx.paging:paging-runtime:3.3.5 (c)
+|    |    +--- androidx.paging:paging-common:3.3.5 (c)
+|    |    \--- androidx.paging:paging-common-ktx:3.3.5 (c)
+|    +--- com.github.bumptech.glide:glide:4.16.0
+|    |    +--- com.github.bumptech.glide:gifdecoder:4.16.0
+|    |    |    \--- androidx.annotation:annotation:1.5.0 -> 1.9.1 (*)
+|    |    +--- com.github.bumptech.glide:disklrucache:4.16.0
+|    |    +--- com.github.bumptech.glide:annotations:4.16.0
+|    |    +--- androidx.fragment:fragment:1.3.6 -> 1.8.5 (*)
+|    |    +--- androidx.vectordrawable:vectordrawable-animated:1.1.0 (*)
+|    |    +--- androidx.exifinterface:exifinterface:1.3.6
+|    |    \--- androidx.tracing:tracing:1.0.0
+|    +--- org.smartregister:knowledge:0.1.0-beta01-preview1-SNAPSHOT
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.google.guava:guava:{strictly 32.1.3-android} -> 32.1.3-android (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:{strictly 2.15.2} -> 2.15.2 (c)
+|    |    \--- com.fasterxml.jackson:jackson-bom:{strictly 2.13.5} -> 2.13.5 (c)
+|    +--- org.smartregister:p2p-lib:0.6.11
+|    |    +--- androidx.compose.ui:ui:1.5.0 -> 1.8.3 (*)
+|    |    +--- androidx.compose.ui:ui-tooling:1.5.0 -> 1.8.3
+|    |    |    \--- androidx.compose.ui:ui-tooling-android:1.8.3
+|    |    |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |         +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |    |         +--- androidx.compose.ui:ui:1.8.3 (*)
+|    |    |         +--- androidx.compose.ui:ui-tooling-data:1.8.3
+|    |    |         |    \--- androidx.compose.ui:ui-tooling-data-android:1.8.3
+|    |    |         |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |         |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |         |         +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |    |         |         +--- androidx.compose.ui:ui:1.8.3 (*)
+|    |    |         |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |    |         |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |    |         |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |    |         |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |         |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |    |         |         +--- androidx.compose.ui:ui-tooling:1.8.3 (c)
+|    |    |         |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |         |         +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |    |         |         \--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (*)
+|    |    |         +--- androidx.compose.ui:ui:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-geometry:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-graphics:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-test-manifest:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-text:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-tooling-data:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-tooling-preview:1.8.3 (c)
+|    |    |         +--- androidx.compose.ui:ui-unit:1.8.3 (c)
+|    |    |         \--- androidx.compose.ui:ui-util:1.8.3 (c)
+|    |    +--- androidx.compose.foundation:foundation:1.5.0 -> 1.8.3 (*)
+|    |    +--- androidx.compose.material:material:1.5.0 -> 1.8.3
+|    |    |    \--- androidx.compose.material:material-android:1.8.3
+|    |    |         +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    |    |         +--- androidx.annotation:annotation-experimental:1.4.1 (*)
+|    |    |         +--- androidx.compose.animation:animation-core:1.7.4 -> 1.8.3 (*)
+|    |    |         +--- androidx.compose.foundation:foundation:1.7.4 -> 1.8.3 (*)
+|    |    |         +--- androidx.compose.material:material-ripple:1.8.3
+|    |    |         |    \--- androidx.compose.material:material-ripple-android:1.8.3
+|    |    |         |         +--- androidx.compose.foundation:foundation:1.7.1 -> 1.8.3 (*)
+|    |    |         |         \--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |    |         +--- androidx.compose.runtime:runtime:1.8.3 (*)
+|    |    |         +--- androidx.compose.ui:ui:1.7.4 -> 1.8.3 (*)
+|    |    |         \--- androidx.compose.ui:ui-text:1.7.4 -> 1.8.3 (*)
+|    |    +--- androidx.compose.material:material-icons-core:1.5.0 -> 1.7.8 (*)
+|    |    +--- androidx.compose.material:material-icons-extended:1.5.0 -> 1.7.8 (*)
+|    |    +--- androidx.compose.runtime:runtime-livedata:1.5.0 -> 1.8.3 (*)
+|    |    +--- androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1 -> 2.8.7 (*)
+|    |    +--- androidx.paging:paging-compose:1.0.0-alpha15 -> 3.3.5 (*)
+|    |    +--- androidx.activity:activity-compose:1.5.1 -> 1.10.1 (*)
+|    |    +--- com.google.accompanist:accompanist-flowlayout:0.23.1 (*)
+|    |    +--- androidx.work:work-runtime-ktx:2.7.1 -> 2.9.1
+|    |    |    +--- androidx.work:work-runtime:2.9.1
+|    |    |    |    +--- androidx.annotation:annotation-experimental:1.0.0 -> 1.4.1 (*)
+|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.5.1 -> 2.8.7 (*)
+|    |    |    |    +--- androidx.startup:startup-runtime:1.1.1
+|    |    |    |    +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
+|    |    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.22 -> 2.1.21 (*)
+|    |    |    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1 -> 1.9.0 (*)
+|    |    |    |    \--- androidx.work:work-runtime-ktx:2.9.1 (c)
+|    |    |    \--- androidx.work:work-runtime:2.9.1 (c)
+|    |    +--- androidx.databinding:viewbinding:8.3.1 -> 8.9.2 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.9.22 -> 2.1.21 (*)
+|    +--- com.auth0:java-jwt:4.4.0
+|    +--- org.smartregister:fhir-common-utils:1.0.5
+|    |    +--- ca.uhn.hapi.fhir:hapi-fhir-base:5.5.0 -> 6.8.0
+|    |    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2 -> 2.13.5
+|    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.5
+|    |    |    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.5
+|    |    |    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.5 (c)
+|    |    |    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.5 -> 2.15.2 (c)
+|    |    |    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.5 (c)
+|    |    |    |    |         +--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.5 -> 2.17.1 (c)
+|    |    |    |    |         \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.5 (c)
+|    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.5 -> 2.15.2
+|    |    |    |    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 -> 2.13.5 (*)
+|    |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.5
+|    |    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.5 (*)
+|    |    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.5 -> 2.15.2 (*)
+|    |    |    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.5 (*)
+|    |    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.5 (*)
+|    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.15.2 -> 2.13.5 (*)
+|    |    |    +--- org.apache.commons:commons-lang3:3.12.0
+|    |    |    +--- org.apache.commons:commons-text:1.10.0
+|    |    |    |    \--- org.apache.commons:commons-lang3:3.12.0
+|    |    |    +--- commons-codec:commons-codec:1.15
+|    |    |    +--- commons-io:commons-io:2.11.0
+|    |    |    +--- com.google.guava:guava:32.1.1-jre -> 32.1.3-android
+|    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    |    |    +--- org.checkerframework:checker-qual:3.37.0
+|    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.21.1
+|    |    |    |    \--- com.google.j2objc:j2objc-annotations:2.8
+|    |    |    +--- org.slf4j:slf4j-api:2.0.3 -> 2.0.13
+|    |    |    \--- com.google.code.findbugs:jsr305:3.0.2
+|    |    +--- ca.uhn.hapi.fhir:org.hl7.fhir.r4:5.4.10 -> 6.0.22
+|    |    |    +--- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:6.0.22
+|    |    |    |    +--- ca.uhn.hapi.fhir:hapi-fhir-base:6.4.1 -> 6.8.0 (*)
+|    |    |    |    +--- com.ibm.icu:icu4j:72.1
+|    |    |    |    \--- commons-net:commons-net:3.9.0
+|    |    |    \--- ca.uhn.hapi.fhir:hapi-fhir-base:6.4.1 -> 6.8.0 (*)
+|    |    \--- ca.uhn.hapi.fhir:hapi-fhir-client:7.4.3 -> 6.8.0
+|    |         \--- ca.uhn.hapi.fhir:hapi-fhir-base:6.8.0 (*)
+|    +--- org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3
+|    |    \--- org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.6.3
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.9.22 -> 2.1.21 (*)
+|    |         +--- org.jetbrains.kotlinx:kotlinx-serialization-bom:1.6.3 (*)
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.9.22 -> 2.1.21 (*)
+|    |         \--- org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3
+|    |              \--- org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.6.3 (*)
+|    +--- androidx.work:work-runtime-ktx:2.9.1 (*)
+|    +--- org.ocpsoft.prettytime:prettytime:5.0.2.Final
+|    +--- org.jetbrains.kotlin:kotlin-reflect:2.1.20
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:2.1.20 -> 2.1.21 (*)
+|    +--- javax.xml.stream:stax-api:1.0-2
+|    +--- com.google.code.gson:gson:2.10.1
+|    +--- com.jakewharton.timber:timber:5.0.1
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.5.21 -> 2.1.21 (*)
+|    +--- com.squareup.retrofit2:converter-gson:2.9.0
+|    |    +--- com.squareup.retrofit2:retrofit:2.9.0 (*)
+|    |    \--- com.google.code.gson:gson:2.8.5 -> 2.10.1
+|    +--- com.jayway.jsonpath:json-path:2.9.0
+|    +--- org.smartregister:easy-rules-jexl:4.1.1
+|    |    +--- org.smartregister:easy-rules-support:4.1.1
+|    |    |    +--- org.smartregister:easy-rules-core:4.1.1
+|    |    |    |    \--- org.slf4j:slf4j-api:2.0.13
+|    |    |    +--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.17.1
+|    |    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.17.1 -> 2.13.5 (*)
+|    |    |    |    +--- org.yaml:snakeyaml:2.2
+|    |    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.17.1 -> 2.15.2 (*)
+|    |    |    |    \--- com.fasterxml.jackson:jackson-bom:2.17.1 -> 2.13.5 (*)
+|    |    |    \--- com.fasterxml.jackson.core:jackson-databind:2.17.1 -> 2.13.5 (*)
+|    |    \--- org.apache.commons:commons-jexl3:3.1
+|    +--- org.smartregister:data-capture:1.3.0-preview10-SNAPSHOT
+|    |    +--- androidx.databinding:viewbinding:8.9.2 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.google.guava:guava:{strictly 32.1.3-android} -> 32.1.3-android (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:{strictly 2.15.2} -> 2.15.2 (c)
+|    |    \--- com.fasterxml.jackson:jackson-bom:{strictly 2.13.5} -> 2.13.5 (c)
+|    +--- org.opencds.cqf.fhir:cqf-fhir-cr:3.8.0
+|    |    +--- org.opencds.cqf.fhir:cqf-fhir-api:3.8.0
+|    |    |    +--- jakarta.annotation:jakarta.annotation-api:2.1.1
+|    |    |    \--- org.slf4j:slf4j-api:2.0.4 -> 2.0.13
+|    |    +--- org.opencds.cqf.fhir:cqf-fhir-utility:3.8.0
+|    |    |    +--- org.opencds.cqf.fhir:cqf-fhir-api:3.8.0 (*)
+|    |    |    +--- ch.qos.logback:logback-classic:1.4.14
+|    |    |    |    +--- ch.qos.logback:logback-core:1.4.14
+|    |    |    |    \--- org.slf4j:slf4j-api:2.0.7 -> 2.0.13
+|    |    |    +--- jakarta.annotation:jakarta.annotation-api:2.1.1
+|    |    |    \--- org.slf4j:slf4j-api:2.0.4 -> 2.0.13
+|    |    +--- jakarta.annotation:jakarta.annotation-api:2.1.1
+|    |    \--- org.slf4j:slf4j-api:2.0.4 -> 2.0.13
+|    +--- org.smartregister:workflow:0.1.0-beta01-preview2-SNAPSHOT
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.google.guava:guava:{strictly 32.1.3-android} -> 32.1.3-android (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:{strictly 2.15.2} -> 2.15.2 (c)
+|    |    \--- com.fasterxml.jackson:jackson-bom:{strictly 2.13.5} -> 2.13.5 (c)
+|    +--- org.smartregister:contrib-barcode:0.1.0-beta3-preview8-SNAPSHOT
+|    |    +--- androidx.databinding:viewbinding:8.9.2 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:2.1.20 -> 2.1.21 (*)
+|    +--- org.smartregister:contrib-locationwidget:0.1.0-alpha01-preview3-SNAPSHOT
+|    |    +--- androidx.databinding:viewbinding:8.9.2 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:2.1.20 -> 2.1.21 (*)
+|    +--- org.smartregister:engine:1.2.0-preview1-SNAPSHOT
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.google.guava:guava:{strictly 32.1.3-android} -> 32.1.3-android (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:{strictly 2.13.5} -> 2.13.5 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:{strictly 2.15.2} -> 2.15.2 (c)
+|    |    \--- com.fasterxml.jackson:jackson-bom:{strictly 2.13.5} -> 2.13.5 (c)
+|    +--- ca.uhn.hapi.fhir:hapi-fhir-structures-r4:6.8.0
+|    |    +--- ca.uhn.hapi.fhir:hapi-fhir-base:6.8.0 (*)
+|    |    +--- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:6.0.22 (*)
+|    |    +--- ca.uhn.hapi.fhir:org.hl7.fhir.r4:6.0.22 (*)
+|    |    +--- ca.uhn.hapi.fhir:hapi-fhir-caching-api:6.8.0
+|    |    |    \--- ca.uhn.hapi.fhir:hapi-fhir-base:6.8.0 (*)
+|    |    \--- com.google.code.findbugs:jsr305:3.0.2
+|    +--- androidx.databinding:viewbinding:8.6.1 -> 8.9.2 (*)
+|    +--- androidx.databinding:databinding-common:8.6.1
+|    +--- androidx.databinding:databinding-runtime:8.6.1 (*)
+|    +--- androidx.databinding:databinding-adapters:8.6.1 (*)
+|    +--- androidx.databinding:databinding-ktx:8.6.1 (*)
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:2.1.20 -> 2.1.21 (*)
+|    +--- ca.uhn.hapi.fhir:hapi-fhir-structures-r4:{strictly 6.8.0} -> 6.8.0 (c)
+|    +--- ca.uhn.hapi.fhir:hapi-fhir-base:{strictly 6.8.0} -> 6.8.0 (c)
+|    +--- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:{strictly 6.0.22} -> 6.0.22 (c)
+|    +--- ca.uhn.hapi.fhir:org.hl7.fhir.r4:{strictly 6.0.22} -> 6.0.22 (c)
+|    +--- ca.uhn.hapi.fhir:hapi-fhir-client:{strictly 6.8.0} -> 6.8.0 (c)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:{strictly 2.13.5} -> 2.13.5 (c)
+|    +--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.13.5} -> 2.13.5 (c)
+|    +--- com.fasterxml.jackson.core:jackson-annotations:{strictly 2.13.5} -> 2.13.5 (c)
+|    +--- com.fasterxml.jackson.core:jackson-core:{strictly 2.15.2} -> 2.15.2 (c)
+|    \--- com.fasterxml.jackson:jackson-bom:{strictly 2.13.5} -> 2.13.5 (c)
++--- androidx.core:core-ktx:1.13.1 (*)
++--- androidx.appcompat:appcompat:1.7.0 (*)
++--- com.google.android.material:material:1.12.0 (*)
++--- com.google.dagger:hilt-android:2.57.1
+|    +--- com.google.dagger:dagger:2.57.1
+|    |    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    |    +--- javax.inject:javax.inject:1
+|    |    \--- org.jspecify:jspecify:1.0.0
+|    +--- com.google.dagger:dagger-lint-aar:2.57.1
+|    +--- com.google.dagger:hilt-core:2.57.1
+|    |    +--- com.google.dagger:dagger:2.57.1 (*)
+|    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    |    \--- javax.inject:javax.inject:1
+|    +--- com.google.code.findbugs:jsr305:3.0.2
+|    +--- androidx.activity:activity:1.5.1 -> 1.10.1 (*)
+|    +--- androidx.annotation:annotation:1.7.1 -> 1.9.1 (*)
+|    +--- androidx.annotation:annotation-experimental:1.3.1 -> 1.4.1 (*)
+|    +--- androidx.fragment:fragment:1.5.1 -> 1.8.5 (*)
+|    +--- androidx.lifecycle:lifecycle-common:2.5.1 -> 2.8.7 (*)
+|    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.1 -> 2.8.7 (*)
+|    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1 -> 2.8.7 (*)
+|    +--- androidx.savedstate:savedstate:1.2.0 -> 1.2.1 (*)
+|    +--- javax.inject:javax.inject:1
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:2.1.21 (*)
++--- androidx.hilt:hilt-work:1.3.0
+|    +--- androidx.annotation:annotation:1.8.1 -> 1.9.1 (*)
+|    +--- androidx.hilt:hilt-common:1.3.0
+|    +--- androidx.work:work-runtime:2.3.4 -> 2.9.1 (*)
+|    +--- com.google.dagger:hilt-android:2.54 -> 2.57.1 (*)
+|    \--- org.jspecify:jspecify:1.0.0
++--- com.mapbox.mapboxsdk:mapbox-sdk-turf:7.2.0 FAILED
++--- io.ona.kujaku:library:0.9.0
+|    +--- com.android.support:support-v4:28.0.0 -> androidx.legacy:legacy-support-v4:1.0.0
+|    |    +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    +--- androidx.media:media:1.0.0
+|    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    \--- androidx.versionedparcelable:versionedparcelable:1.0.0 -> 1.1.1 (*)
+|    |    +--- androidx.legacy:legacy-support-core-utils:1.0.0 (*)
+|    |    +--- androidx.legacy:legacy-support-core-ui:1.0.0
+|    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    +--- androidx.legacy:legacy-support-core-utils:1.0.0 (*)
+|    |    |    +--- androidx.customview:customview:1.0.0 -> 1.1.0 (*)
+|    |    |    +--- androidx.viewpager:viewpager:1.0.0 (*)
+|    |    |    +--- androidx.coordinatorlayout:coordinatorlayout:1.0.0 -> 1.1.0 (*)
+|    |    |    +--- androidx.drawerlayout:drawerlayout:1.0.0 -> 1.1.1 (*)
+|    |    |    +--- androidx.slidingpanelayout:slidingpanelayout:1.0.0 -> 1.2.0 (*)
+|    |    |    +--- androidx.interpolator:interpolator:1.0.0 (*)
+|    |    |    +--- androidx.swiperefreshlayout:swiperefreshlayout:1.0.0
+|    |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    +--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    |    \--- androidx.interpolator:interpolator:1.0.0 (*)
+|    |    |    +--- androidx.asynclayoutinflater:asynclayoutinflater:1.0.0
+|    |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.9.1 (*)
+|    |    |    |    \--- androidx.core:core:1.0.0 -> 1.13.1 (*)
+|    |    |    \--- androidx.cursoradapter:cursoradapter:1.0.0 (*)
+|    |    \--- androidx.fragment:fragment:1.0.0 -> 1.8.5 (*)
+|    +--- com.mapbox.mapboxsdk:mapbox-android-sdk:8.3.3
+|    |    +--- com.mapbox.mapboxsdk:mapbox-android-telemetry:4.5.1
+|    |    |    +--- com.squareup.okhttp3:okhttp:3.12.0 -> 4.12.0 (*)
+|    |    |    +--- com.google.code.gson:gson:2.8.5 -> 2.10.1
+|    |    |    +--- com.android.support:support-annotations:27.1.1 -> androidx.annotation:annotation:1.9.1 (*)
+|    |    |    +--- com.mapbox.mapboxsdk:mapbox-android-core:1.3.0
+|    |    |    \--- com.android.support:support-core-utils:27.1.1 -> androidx.legacy:legacy-support-core-utils:1.0.0 (*)
+|    |    +--- com.mapbox.mapboxsdk:mapbox-sdk-geojson:4.8.0
+|    |    |    \--- com.google.code.gson:gson:2.8.5 -> 2.10.1
+|    |    +--- com.mapbox.mapboxsdk:mapbox-android-gestures:0.5.1
+|    |    \--- com.mapbox.mapboxsdk:mapbox-android-accounts:0.2.0
+|    +--- com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:0.6.0
+|    |    +--- com.android.support:appcompat-v7:28.0.0 -> androidx.appcompat:appcompat:1.7.0 (*)
+|    |    \--- com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.0 -> 8.3.3 (*)
+|    +--- io.ona.kujaku:utils:0.8.0
+|    |    +--- com.android.support:appcompat-v7:28.0.0 -> androidx.appcompat:appcompat:1.7.0 (*)
+|    |    +--- com.cocoahero.android:geojson:1.0.1
+|    |    \--- com.mapbox.mapboxsdk:mapbox-android-sdk:8.3.3 (*)
+|    +--- com.android.support:appcompat-v7:28.0.0 -> androidx.appcompat:appcompat:1.7.0 (*)
+|    +--- com.android.support:design:28.0.0 -> com.google.android.material:material:1.12.0 (*)
+|    +--- org.simpleframework:simple-xml:2.7.1
+|    |    \--- stax:stax:1.2.0
+|    +--- com.jakewharton.threetenabp:threetenabp:1.1.1
+|    |    \--- org.threeten:threetenbp:1.3.7
+|    +--- com.jakewharton.timber:timber:4.7.1 -> 5.0.1 (*)
+|    +--- com.cocoahero.android:geojson:1.0.1
+|    +--- com.android.volley:volley:1.1.0
+|    +--- com.snatik:storage:2.1.0
+|    +--- com.karumi:dexter:5.0.0
+|    |    +--- com.android.support:appcompat-v7:27.1.1 -> androidx.appcompat:appcompat:1.7.0 (*)
+|    |    \--- com.android.support:design:27.1.1 -> com.google.android.material:material:1.12.0 (*)
+|    +--- com.android.support:cardview-v7:28.0.0 -> androidx.cardview:cardview:1.0.0 (*)
+|    +--- com.android.support:recyclerview-v7:28.0.0 -> androidx.recyclerview:recyclerview:1.4.0 (*)
+|    +--- com.google.android.gms:play-services-location:16.0.0 -> 21.3.0
+|    |    +--- com.google.android.gms:play-services-base:18.5.0
+|    |    |    +--- androidx.collection:collection:1.0.0 -> 1.5.0 (*)
+|    |    |    +--- androidx.core:core:1.2.0 -> 1.13.1 (*)
+|    |    |    +--- androidx.fragment:fragment:1.0.0 -> 1.8.5 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:18.4.0
+|    |    |    |    +--- androidx.collection:collection:1.0.0 -> 1.5.0 (*)
+|    |    |    |    +--- androidx.core:core:1.2.0 -> 1.13.1 (*)
+|    |    |    |    \--- androidx.fragment:fragment:1.1.0 -> 1.8.5 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:18.2.0
+|    |    |         \--- com.google.android.gms:play-services-basement:18.4.0 (*)
+|    |    +--- com.google.android.gms:play-services-basement:18.4.0 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:18.2.0 (*)
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.9.0 -> 2.1.21 (*)
+|    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 -> 1.9.0 (*)
+|    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 -> 1.9.0 (*)
+|    +--- io.realm:realm-android-library:4.1.1
+|    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    +--- com.getkeepsafe.relinker:relinker:1.2.2
+|    |    \--- io.realm:realm-annotations:4.1.1
+|    \--- io.realm:realm-annotations:4.1.1
++--- androidx.databinding:viewbinding:{strictly 8.9.2} -> 8.9.2 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 2.1.21} -> 2.1.21 (c)
++--- androidx.databinding:databinding-common:{strictly 8.6.1} -> 8.6.1 (c)
++--- androidx.databinding:databinding-runtime:{strictly 8.6.1} -> 8.6.1 (c)
++--- androidx.core:core-ktx:{strictly 1.13.1} -> 1.13.1 (c)
++--- androidx.compose.ui:ui-test-manifest:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.fragment:fragment-testing:{strictly 1.8.5} -> 1.8.5 (c)
++--- androidx.databinding:databinding-adapters:{strictly 8.6.1} -> 8.6.1 (c)
++--- androidx.databinding:databinding-ktx:{strictly 8.6.1} -> 8.6.1 (c)
++--- org.jetbrains.kotlin:kotlin-parcelize-runtime:{strictly 2.1.20} -> 2.1.20 (c)
++--- com.google.android.material:material:{strictly 1.12.0} -> 1.12.0 (c)
++--- androidx.appcompat:appcompat:{strictly 1.7.0} -> 1.7.0 (c)
++--- com.google.dagger:hilt-android:{strictly 2.57.1} -> 2.57.1 (c)
++--- androidx.hilt:hilt-work:{strictly 1.3.0} -> 1.3.0 (c)
++--- io.ona.kujaku:library:{strictly 0.9.0} -> 0.9.0 (c)
++--- androidx.annotation:annotation:{strictly 1.9.1} -> 1.9.1 (c)
++--- androidx.lifecycle:lifecycle-runtime:{strictly 2.8.7} -> 2.8.7 (c)
++--- org.jetbrains.kotlinx:kotlinx-coroutines-android:{strictly 1.9.0} -> 1.9.0 (c)
++--- androidx.lifecycle:lifecycle-runtime-ktx:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-livedata:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-process:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-service:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-viewmodel:{strictly 2.8.7} -> 2.8.7 (c)
++--- org.jetbrains:annotations:{strictly 23.0.0} -> 23.0.0 (c)
++--- org.jetbrains.kotlin:kotlin-android-extensions-runtime:{strictly 2.1.20} -> 2.1.20 (c)
++--- androidx.activity:activity:{strictly 1.10.1} -> 1.10.1 (c)
++--- androidx.fragment:fragment-ktx:{strictly 1.8.5} -> 1.8.5 (c)
++--- androidx.fragment:fragment-testing-manifest:{strictly 1.8.5} -> 1.8.5 (c)
++--- androidx.test:core:{strictly 1.5.0} -> 1.5.0 (c)
++--- androidx.datastore:datastore-preferences:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.datastore:datastore:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.navigation:navigation-compose:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.navigation:navigation-fragment-ktx:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.navigation:navigation-ui-ktx:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.compose.material:material-icons-extended:{strictly 1.7.8} -> 1.7.8 (c)
++--- androidx.compose.material:material-icons-core:{strictly 1.7.8} -> 1.7.8 (c)
++--- androidx.activity:activity-compose:{strictly 1.10.1} -> 1.10.1 (c)
++--- androidx.activity:activity-ktx:{strictly 1.10.1} -> 1.10.1 (c)
++--- androidx.compose.ui:ui:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-tooling-preview:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.constraintlayout:constraintlayout-compose:{strictly 1.1.0} -> 1.1.0 (c)
++--- androidx.compose.foundation:foundation:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.runtime:runtime-livedata:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.lifecycle:lifecycle-viewmodel-ktx:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-viewmodel-compose:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-livedata-ktx:{strictly 2.8.7} -> 2.8.7 (c)
++--- com.google.accompanist:accompanist-placeholder:{strictly 0.23.1} -> 0.23.1 (c)
++--- com.google.accompanist:accompanist-flowlayout:{strictly 0.23.1} -> 0.23.1 (c)
++--- org.jetbrains.kotlinx:kotlinx-coroutines-core:{strictly 1.9.0} -> 1.9.0 (c)
++--- com.squareup.retrofit2:retrofit:{strictly 2.9.0} -> 2.9.0 (c)
++--- com.squareup.retrofit2:retrofit-mock:{strictly 2.9.0} -> 2.9.0 (c)
++--- com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:{strictly 0.8.0} -> 0.8.0 (c)
++--- com.squareup.okhttp3:logging-interceptor:{strictly 4.12.0} -> 4.12.0 (c)
++--- com.squareup.okhttp3:okhttp:{strictly 4.12.0} -> 4.12.0 (c)
++--- androidx.paging:paging-compose:{strictly 3.3.5} -> 3.3.5 (c)
++--- androidx.paging:paging-runtime-ktx:{strictly 3.3.5} -> 3.3.5 (c)
++--- com.github.bumptech.glide:glide:{strictly 4.16.0} -> 4.16.0 (c)
++--- org.smartregister:knowledge:{strictly 0.1.0-beta01-preview1-SNAPSHOT} -> 0.1.0-beta01-preview1-SNAPSHOT (c)
++--- org.smartregister:p2p-lib:{strictly 0.6.11} -> 0.6.11 (c)
++--- com.auth0:java-jwt:{strictly 4.4.0} -> 4.4.0 (c)
++--- org.smartregister:fhir-common-utils:{strictly 1.0.5} -> 1.0.5 (c)
++--- org.jetbrains.kotlinx:kotlinx-serialization-json:{strictly 1.6.3} -> 1.6.3 (c)
++--- androidx.work:work-runtime-ktx:{strictly 2.9.1} -> 2.9.1 (c)
++--- org.ocpsoft.prettytime:prettytime:{strictly 5.0.2.Final} -> 5.0.2.Final (c)
++--- org.jetbrains.kotlin:kotlin-reflect:{strictly 2.1.20} -> 2.1.20 (c)
++--- javax.xml.stream:stax-api:{strictly 1.0-2} -> 1.0-2 (c)
++--- com.google.code.gson:gson:{strictly 2.10.1} -> 2.10.1 (c)
++--- com.jakewharton.timber:timber:{strictly 5.0.1} -> 5.0.1 (c)
++--- com.squareup.retrofit2:converter-gson:{strictly 2.9.0} -> 2.9.0 (c)
++--- com.jayway.jsonpath:json-path:{strictly 2.9.0} -> 2.9.0 (c)
++--- org.smartregister:easy-rules-jexl:{strictly 4.1.1} -> 4.1.1 (c)
++--- org.smartregister:data-capture:{strictly 1.3.0-preview10-SNAPSHOT} -> 1.3.0-preview10-SNAPSHOT (c)
++--- org.opencds.cqf.fhir:cqf-fhir-cr:{strictly 3.8.0} -> 3.8.0 (c)
++--- org.smartregister:workflow:{strictly 0.1.0-beta01-preview2-SNAPSHOT} -> 0.1.0-beta01-preview2-SNAPSHOT (c)
++--- org.smartregister:contrib-barcode:{strictly 0.1.0-beta3-preview8-SNAPSHOT} -> 0.1.0-beta3-preview8-SNAPSHOT (c)
++--- org.smartregister:contrib-locationwidget:{strictly 0.1.0-alpha01-preview3-SNAPSHOT} -> 0.1.0-alpha01-preview3-SNAPSHOT (c)
++--- org.smartregister:engine:{strictly 1.2.0-preview1-SNAPSHOT} -> 1.2.0-preview1-SNAPSHOT (c)
++--- ca.uhn.hapi.fhir:hapi-fhir-structures-r4:{strictly 6.8.0} -> 6.8.0 (c)
++--- androidx.core:core:{strictly 1.13.1} -> 1.13.1 (c)
++--- androidx.appcompat:appcompat-resources:{strictly 1.7.0} -> 1.7.0 (c)
++--- androidx.cursoradapter:cursoradapter:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.drawerlayout:drawerlayout:{strictly 1.1.1} -> 1.1.1 (c)
++--- androidx.fragment:fragment:{strictly 1.8.5} -> 1.8.5 (c)
++--- androidx.savedstate:savedstate:{strictly 1.2.1} -> 1.2.1 (c)
++--- androidx.cardview:cardview:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.coordinatorlayout:coordinatorlayout:{strictly 1.1.0} -> 1.1.0 (c)
++--- androidx.constraintlayout:constraintlayout:{strictly 2.2.0} -> 2.2.0 (c)
++--- androidx.dynamicanimation:dynamicanimation:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.annotation:annotation-experimental:{strictly 1.4.1} -> 1.4.1 (c)
++--- androidx.recyclerview:recyclerview:{strictly 1.4.0} -> 1.4.0 (c)
++--- androidx.resourceinspection:resourceinspection-annotation:{strictly 1.0.1} -> 1.0.1 (c)
++--- androidx.transition:transition:{strictly 1.5.0} -> 1.5.0 (c)
++--- androidx.vectordrawable:vectordrawable:{strictly 1.1.0} -> 1.1.0 (c)
++--- androidx.viewpager2:viewpager2:{strictly 1.1.0-beta02} -> 1.1.0-beta02 (c)
++--- com.google.dagger:dagger:{strictly 2.57.1} -> 2.57.1 (c)
++--- com.google.dagger:dagger-lint-aar:{strictly 2.57.1} -> 2.57.1 (c)
++--- com.google.dagger:hilt-core:{strictly 2.57.1} -> 2.57.1 (c)
++--- com.google.code.findbugs:jsr305:{strictly 3.0.2} -> 3.0.2 (c)
++--- androidx.lifecycle:lifecycle-common:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-viewmodel-savedstate:{strictly 2.8.7} -> 2.8.7 (c)
++--- javax.inject:javax.inject:{strictly 1} -> 1 (c)
++--- androidx.hilt:hilt-common:{strictly 1.3.0} -> 1.3.0 (c)
++--- androidx.work:work-runtime:{strictly 2.9.1} -> 2.9.1 (c)
++--- org.jspecify:jspecify:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.legacy:legacy-support-v4:{strictly 1.0.0} -> 1.0.0 (c)
++--- com.mapbox.mapboxsdk:mapbox-android-sdk:{strictly 8.3.3} -> 8.3.3 (c)
++--- com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:{strictly 0.6.0} -> 0.6.0 (c)
++--- io.ona.kujaku:utils:{strictly 0.8.0} -> 0.8.0 (c)
++--- org.simpleframework:simple-xml:{strictly 2.7.1} -> 2.7.1 (c)
++--- com.jakewharton.threetenabp:threetenabp:{strictly 1.1.1} -> 1.1.1 (c)
++--- com.cocoahero.android:geojson:{strictly 1.0.1} -> 1.0.1 (c)
++--- com.android.volley:volley:{strictly 1.1.0} -> 1.1.0 (c)
++--- com.snatik:storage:{strictly 2.1.0} -> 2.1.0 (c)
++--- com.karumi:dexter:{strictly 5.0.0} -> 5.0.0 (c)
++--- com.google.android.gms:play-services-location:{strictly 21.3.0} -> 21.3.0 (c)
++--- io.realm:realm-android-library:{strictly 4.1.1} -> 4.1.1 (c)
++--- io.realm:realm-annotations:{strictly 4.1.1} -> 4.1.1 (c)
++--- androidx.annotation:annotation-jvm:{strictly 1.9.1} -> 1.9.1 (c)
++--- androidx.lifecycle:lifecycle-runtime-android:{strictly 2.8.7} -> 2.8.7 (c)
++--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:{strictly 1.9.0} -> 1.9.0 (c)
++--- androidx.lifecycle:lifecycle-runtime-ktx-android:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.arch.core:core-runtime:{strictly 2.2.0} -> 2.2.0 (c)
++--- androidx.lifecycle:lifecycle-livedata-core:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-livedata-core-ktx:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.startup:startup-runtime:{strictly 1.1.1} -> 1.1.1 (c)
++--- androidx.lifecycle:lifecycle-viewmodel-android:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.core:core-viewtree:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.collection:collection-ktx:{strictly 1.5.0} -> 1.5.0 (c)
++--- androidx.savedstate:savedstate-ktx:{strictly 1.2.1} -> 1.2.1 (c)
++--- androidx.test:monitor:{strictly 1.6.0} -> 1.6.0 (c)
++--- androidx.test.services:storage:{strictly 1.4.2} -> 1.4.2 (c)
++--- androidx.tracing:tracing:{strictly 1.0.0} -> 1.0.0 (c)
++--- com.google.guava:listenablefuture:{strictly 9999.0-empty-to-avoid-conflict-with-guava} -> 9999.0-empty-to-avoid-conflict-with-guava (c)
++--- androidx.concurrent:concurrent-futures:{strictly 1.1.0} -> 1.1.0 (c)
++--- androidx.compose.ui:ui-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-tooling-preview-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- ca.uhn.hapi.fhir:hapi-fhir-base:{strictly 6.8.0} -> 6.8.0 (c)
++--- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:{strictly 6.0.22} -> 6.0.22 (c)
++--- ca.uhn.hapi.fhir:org.hl7.fhir.r4:{strictly 6.0.22} -> 6.0.22 (c)
++--- ca.uhn.hapi.fhir:hapi-fhir-caching-api:{strictly 6.8.0} -> 6.8.0 (c)
++--- androidx.datastore:datastore-preferences-android:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.datastore:datastore-android:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.compose.animation:animation:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.runtime:runtime:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.runtime:runtime-saveable:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.navigation:navigation-runtime-ktx:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.navigation:navigation-fragment:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.navigation:navigation-ui:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.compose.material:material-icons-extended-android:{strictly 1.7.8} -> 1.7.8 (c)
++--- androidx.compose.material:material-icons-core-android:{strictly 1.7.8} -> 1.7.8 (c)
++--- androidx.constraintlayout:constraintlayout-compose-android:{strictly 1.1.0} -> 1.1.0 (c)
++--- androidx.compose.foundation:foundation-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.lifecycle:lifecycle-runtime-compose:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.lifecycle:lifecycle-viewmodel-compose-android:{strictly 2.8.7} -> 2.8.7 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.9.20} -> 1.9.20 (c)
++--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:{strictly 1.9.0} -> 1.9.0 (c)
++--- org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:{strictly 1.6.3} -> 1.6.3 (c)
++--- com.squareup.okio:okio:{strictly 3.6.0} -> 3.6.0 (c)
++--- androidx.paging:paging-compose-android:{strictly 3.3.5} -> 3.3.5 (c)
++--- androidx.paging:paging-runtime:{strictly 3.3.5} -> 3.3.5 (c)
++--- com.github.bumptech.glide:gifdecoder:{strictly 4.16.0} -> 4.16.0 (c)
++--- com.github.bumptech.glide:disklrucache:{strictly 4.16.0} -> 4.16.0 (c)
++--- com.github.bumptech.glide:annotations:{strictly 4.16.0} -> 4.16.0 (c)
++--- androidx.vectordrawable:vectordrawable-animated:{strictly 1.1.0} -> 1.1.0 (c)
++--- androidx.exifinterface:exifinterface:{strictly 1.3.6} -> 1.3.6 (c)
++--- androidx.compose.ui:ui-tooling:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.material:material:{strictly 1.8.3} -> 1.8.3 (c)
++--- ca.uhn.hapi.fhir:hapi-fhir-client:{strictly 6.8.0} -> 6.8.0 (c)
++--- org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:{strictly 1.6.3} -> 1.6.3 (c)
++--- org.smartregister:easy-rules-support:{strictly 4.1.1} -> 4.1.1 (c)
++--- org.apache.commons:commons-jexl3:{strictly 3.1} -> 3.1 (c)
++--- org.opencds.cqf.fhir:cqf-fhir-api:{strictly 3.8.0} -> 3.8.0 (c)
++--- org.opencds.cqf.fhir:cqf-fhir-utility:{strictly 3.8.0} -> 3.8.0 (c)
++--- jakarta.annotation:jakarta.annotation-api:{strictly 2.1.1} -> 2.1.1 (c)
++--- org.slf4j:slf4j-api:{strictly 2.0.13} -> 2.0.13 (c)
++--- androidx.versionedparcelable:versionedparcelable:{strictly 1.1.1} -> 1.1.1 (c)
++--- androidx.collection:collection:{strictly 1.5.0} -> 1.5.0 (c)
++--- androidx.loader:loader:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.viewpager:viewpager:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.customview:customview:{strictly 1.1.0} -> 1.1.0 (c)
++--- androidx.legacy:legacy-support-core-utils:{strictly 1.0.0} -> 1.0.0 (c)
++--- jakarta.inject:jakarta.inject-api:{strictly 2.0.1} -> 2.0.1 (c)
++--- androidx.lifecycle:lifecycle-common-jvm:{strictly 2.8.7} -> 2.8.7 (c)
++--- androidx.media:media:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.legacy:legacy-support-core-ui:{strictly 1.0.0} -> 1.0.0 (c)
++--- com.mapbox.mapboxsdk:mapbox-android-telemetry:{strictly 4.5.1} -> 4.5.1 (c)
++--- com.mapbox.mapboxsdk:mapbox-sdk-geojson:{strictly 4.8.0} -> 4.8.0 (c)
++--- com.mapbox.mapboxsdk:mapbox-android-gestures:{strictly 0.5.1} -> 0.5.1 (c)
++--- com.mapbox.mapboxsdk:mapbox-android-accounts:{strictly 0.2.0} -> 0.2.0 (c)
++--- stax:stax:{strictly 1.2.0} -> 1.2.0 (c)
++--- org.threeten:threetenbp:{strictly 1.3.7} -> 1.3.7 (c)
++--- com.google.android.gms:play-services-base:{strictly 18.5.0} -> 18.5.0 (c)
++--- com.google.android.gms:play-services-basement:{strictly 18.4.0} -> 18.4.0 (c)
++--- com.google.android.gms:play-services-tasks:{strictly 18.2.0} -> 18.2.0 (c)
++--- com.getkeepsafe.relinker:relinker:{strictly 1.2.2} -> 1.2.2 (c)
++--- androidx.arch.core:core-common:{strictly 2.2.0} -> 2.2.0 (c)
++--- androidx.test:annotation:{strictly 1.0.1} -> 1.0.1 (c)
++--- androidx.compose.ui:ui-geometry:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-graphics:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-text:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-unit:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-util:{strictly 1.8.3} -> 1.8.3 (c)
++--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:{strictly 2.13.5} -> 2.13.5 (c)
++--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.13.5} -> 2.13.5 (c)
++--- org.apache.commons:commons-lang3:{strictly 3.12.0} -> 3.12.0 (c)
++--- org.apache.commons:commons-text:{strictly 1.10.0} -> 1.10.0 (c)
++--- commons-codec:commons-codec:{strictly 1.15} -> 1.15 (c)
++--- commons-io:commons-io:{strictly 2.11.0} -> 2.11.0 (c)
++--- com.google.guava:guava:{strictly 32.1.3-android} -> 32.1.3-android (c)
++--- androidx.datastore:datastore-preferences-core:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.datastore:datastore-core:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.datastore:datastore-core-okio:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.navigation:navigation-common-ktx:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.navigation:navigation-runtime:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.compose.animation:animation-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.runtime:runtime-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.runtime:runtime-saveable-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.slidingpanelayout:slidingpanelayout:{strictly 1.2.0} -> 1.2.0 (c)
++--- androidx.lifecycle:lifecycle-runtime-compose-android:{strictly 2.8.7} -> 2.8.7 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.9.20} -> 1.9.20 (c)
++--- org.jetbrains.kotlinx:kotlinx-serialization-bom:{strictly 1.6.3} -> 1.6.3 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 2.1.21} -> 2.1.21 (c)
++--- com.squareup.okio:okio-jvm:{strictly 3.6.0} -> 3.6.0 (c)
++--- androidx.paging:paging-common:{strictly 3.3.5} -> 3.3.5 (c)
++--- androidx.paging:paging-common-ktx:{strictly 3.3.5} -> 3.3.5 (c)
++--- androidx.interpolator:interpolator:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.compose.ui:ui-tooling-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.material:material-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- org.jetbrains.kotlinx:kotlinx-serialization-core:{strictly 1.6.3} -> 1.6.3 (c)
++--- org.smartregister:easy-rules-core:{strictly 4.1.1} -> 4.1.1 (c)
++--- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:{strictly 2.17.1} -> 2.17.1 (c)
++--- ch.qos.logback:logback-classic:{strictly 1.4.14} -> 1.4.14 (c)
++--- androidx.collection:collection-jvm:{strictly 1.5.0} -> 1.5.0 (c)
++--- androidx.documentfile:documentfile:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.localbroadcastmanager:localbroadcastmanager:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.print:print:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.swiperefreshlayout:swiperefreshlayout:{strictly 1.0.0} -> 1.0.0 (c)
++--- androidx.asynclayoutinflater:asynclayoutinflater:{strictly 1.0.0} -> 1.0.0 (c)
++--- com.mapbox.mapboxsdk:mapbox-android-core:{strictly 1.3.0} -> 1.3.0 (c)
++--- androidx.compose.ui:ui-geometry-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-graphics-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-text-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-unit-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-util-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- com.fasterxml.jackson.core:jackson-annotations:{strictly 2.13.5} -> 2.13.5 (c)
++--- com.fasterxml.jackson.core:jackson-core:{strictly 2.15.2} -> 2.15.2 (c)
++--- com.fasterxml.jackson:jackson-bom:{strictly 2.13.5} -> 2.13.5 (c)
++--- com.google.guava:failureaccess:{strictly 1.0.1} -> 1.0.1 (c)
++--- org.checkerframework:checker-qual:{strictly 3.37.0} -> 3.37.0 (c)
++--- com.google.errorprone:error_prone_annotations:{strictly 2.21.1} -> 2.21.1 (c)
++--- com.ibm.icu:icu4j:{strictly 72.1} -> 72.1 (c)
++--- commons-net:commons-net:{strictly 3.9.0} -> 3.9.0 (c)
++--- androidx.datastore:datastore-preferences-core-jvm:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.datastore:datastore-core-android:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.datastore:datastore-core-okio-jvm:{strictly 1.1.2} -> 1.1.2 (c)
++--- androidx.navigation:navigation-common:{strictly 2.8.9} -> 2.8.9 (c)
++--- androidx.compose.animation:animation-core:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.foundation:foundation-layout:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.paging:paging-common-android:{strictly 3.3.5} -> 3.3.5 (c)
++--- androidx.compose.ui:ui-tooling-data:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.material:material-ripple:{strictly 1.8.3} -> 1.8.3 (c)
++--- org.yaml:snakeyaml:{strictly 2.2} -> 2.2 (c)
++--- ch.qos.logback:logback-core:{strictly 1.4.14} -> 1.4.14 (c)
++--- androidx.compose.animation:animation-core-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.foundation:foundation-layout-android:{strictly 1.8.3} -> 1.8.3 (c)
++--- androidx.compose.ui:ui-tooling-data-android:{strictly 1.8.3} -> 1.8.3 (c)
+\--- androidx.compose.material:material-ripple-android:{strictly 1.8.3} -> 1.8.3 (c)
+
+(c) - A dependency constraint, not a dependency. The dependency affected by the constraint occurs elsewhere in the tree.
+(*) - Indicates repeated occurrences of a transitive dependency subtree. Gradle expands transitive dependency subtrees only once per project; repeat occurrences only display the root of the subtree, followed by this annotation.
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+BUILD SUCCESSFUL in 31s
+10 actionable tasks: 1 executed, 9 up-to-date

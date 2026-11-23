@@ -1,0 +1,184 @@
+<resources>
+    <string name="back_to_clients">Back to client list</string>
+    <string name="test_results">Test Results</string>
+
+    <string name="edit_patient_info">Edit Info</string>
+
+    <string name="menu_clients">Clients</string>
+    <string name="menu_settings">Settings</string>
+    <string name="cannot_find_parent_questionnaire">Cannot find the parent Questionnaire!</string>
+
+    <string name="loading_forms">Loading forms…</string>
+    <string name="loading_responses">Loading responses…</string>
+    <string name="no_test_results_found">No test results found</string>
+    <string name="patient_test_results">TEST RESULTS</string>
+    <string name="last_test"> Last Test - %1$s</string>
+    <string name="sample_distance" translatable="false">2.4 km</string>
+    <string name="hash_sign" translatable="false">#</string>
+    <string name="menu_tasks">Tasks</string>
+    <string name="household">Household</string>
+    <string name="routine_visit">Routine visit</string>
+    <string name="anc_visit">ANC visit</string>
+    <string name="at_risk">At risk</string>
+    <string name="no_tasks">No tasks</string>
+    <string name="add_member">ADD MEMBER</string>
+    <string name="what_to_do">What do you want to do?</string>
+
+    <!--Overflow menu strings -->
+    <string name="view_profile">View profile</string>
+    <string name="family_details">Family details</string>
+    <string name="change_family_head">Change family head</string>
+    <string name="change_primary_caregiver">Change primary caregiver</string>
+    <string name="family_activity">Family activity</string>
+    <string name="view_past_encounters">View past encounters</string>
+    <string name="remove_family">Remove family</string>
+    <string name="family_suffix">%1$s Family</string>
+    <string name="remove_this_person">Remove this person</string>
+    <string name="individual_details">Individual details</string>
+    <string name="view_family">View family</string>
+    <string name="record_sick_child">Record sick child</string>
+
+    <!-- SideMenu option strings-->
+    <string name="device_to_device_sync">Device to device sync</string>
+    <string name="anc_clients">ANC Clients</string>
+    <string name="all_clients">All Clients</string>
+    <string name="pnc_clients">PNC Clients</string>
+    <string name="hiv_clients">Clients List</string>
+    <string name="phone_tracing_clients">Phone Tracing</string>
+    <string name="home_tracing_clients">Home Tracing</string>
+    <string name="appointment_clients">Appointments</string>
+    <string name="family_planning_clients">Family Planning Clients</string>
+    <string name="households">Households</string>
+    <string name="children">Children</string>
+
+    <!--remove family questionnaire strings-->
+    <string name="remove_family_warning">Removing %1$s will remove their entire health record from your device. This action can’t be undone.</string>
+
+    <!--remove family member questionnaire strings-->
+    <string name="remove_family_member_warning">%1$s will be removed permanently from this family. This action can’t be undone.</string>
+    <string name="remove_member">Remove member</string>
+
+    <!--Reporting strings -->
+    <string name="date_range">Date range</string>
+    <string name="change">Change</string>
+    <string name="all">All</string>
+    <string name="individual">Individual</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="patient">Patient</string>
+    <string name="subject">Subject</string>
+    <string name="generate_report">GENERATE REPORT</string>
+    <string name="select_patient">SELECT PATIENT</string>
+    <string name="select_subject">SELECT SUBJECT</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="select_date">Select dates</string>
+
+    <!--Change family head strings -->
+    <string name="no_eligible_family_members">No eligible family members found for family head.</string>
+    <string name="label_select_new_head">Select a new family head</string>
+    <string name="label_assign_new_family_head">Assign new family head</string>
+    <string name="alert_message_abort_operation">Are you sure you want to abort this operation?</string>
+
+    <!-- Dialog alert messages-->
+    <string name="unsaved_changes_message_alert">If you leave before saving, your edits or changes will be lost</string>
+    <string name="visit_due_on">%1$s due on %2$s</string>
+    <string name="visit_due_today">%1$s due today</string>
+    <string name="visit_overdue">%1$s overdue %2$s ago</string>
+    <string name="record_as_anc">Record as ANC</string>
+    <string name="pregnancy_outcome">Pregnancy Outcome</string>
+    <string name="registers">Registers</string>
+    <string name="title_no_location_set">No location Set</string>
+    <string name="no_locations_to_render">No locations to render on map</string>
+    <string name="message_location_set">Set location to sync data and load service points</string>
+    <string name="positive_button_location_set">Set location</string>
+
+    <string name="questionnaire_response_name" translatable="false">%1$s (%2$s)</string>
+    <string name="due_on">Due on %1$s</string>
+
+    <string name="geo_widget_fragment_destination" translatable="false">GeoWidget Fragment Destination</string>
+
+    <string name="structuremap_failed">Failed to extract resources for %1$s</string>
+    <string name="structure_map_missing_message">Missing StructureMap for Questionnaire , QuestionnaireResponse saved</string>
+    <string name="structure_success">Successfully extracted resources for %1$s</string>
+    <string name="reassigned_managing_entity">Managing entity reassigned successfully</string>
+    <string name="error_fetching_user_details">Failed to fetch user details</string>
+    <string name="questionnaire_not_found">Questionnaire not found.  Sync all questionnaires to fix</string>
+    <string name="no_visits">No visits</string>
+    <string name="questionnaire_response_invalid">Questionnaire response invalid</string>
+    <string name="extracted_resources_validation_fail">Validation on extracted resources failed. Please check the logs</string>
+    <string name="error_occurred_generating_careplan">An error occurred generating CarePlan. Please check the logs</string>
+    <string name="app_version_tag_url" translatable="false">https://smartregister.org/app-version</string>
+    <string name="application_version">Application Version</string>
+    <string name="missing_subject_type">Missing subject type on questionnaire. Provide Questionnaire.subjectType to resolve.</string>
+    <string name="missing_questionnaire_config">QuestionnaireConfig is required but missing.</string>
+    <string name="error_populating_questionnaire">Error populating some questionnaire fields. Invalid QuestionnaireResponse.</string>
+    <string name="extraction_in_progress">Processing questionnaire data…</string>
+    <string name="loading_questionnaire">Loading questionnaire…</string>
+    <string name="clear_all">Clear All</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="location_permissions_denied">Location Access Denied: To capture GPS coordinates, please enable location permissions in your device settings.</string>
+    <string name="location_services_disabled">Location services are disabled. Do you want to enable them?</string>
+    <string name="copy_text_success_message">Link %1$s copied successfully</string>
+    <string name="submit_questionnaire">Submit</string>
+    <string name="invalid_base_resource">The base resource for GeoWidgetConfiguration MUST be Location</string>
+    <string name="no_search_coonfigs_provided">No configs provided for search bar</string>
+    <string name="no_found_locations_matching_text">No location found matching text \"%1$s\"</string>
+    <string name="open_choice_other_hint">Other</string>
+    <string name="qr_code">qr_code</string>
+    <string name="barcode_camera_permission_denied">Camera permission request denied. Barcode may not work as expected</string>
+    <string name="prompt_point_at_a_barcode">Place your camera over the QR Code to start scanning</string>
+    <string name="add_qr_code">Add QR code</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="scan_qr_camera_instruction">Place your camera over the entire QR Code to start scanning</string>
+    <string name="failed_to_get_gps_location">Failed to get GPS location</string>
+    <string name="space_asterisk" translatable="false">\u0020\u002a</string>
+    <string name="exit_app">Exit App</string>
+    <string name="exit_app_message">Are you sure you want to exit from the app?</string>
+    <string name="missing_multi_select_view_configs">Missing required multi select view configs. Please provide the configurations for the view to render.</string>
+    <string name="locations_without_coordinates"><b>%1$d</b> out of <b>%2$d </b>Location(s) have no coordinates</string>
+    <string name="all_locations_rendered"><b>All</b> the locations rendered successfully"</string>
+    <string name="all_matching_locations_rendered"><b>%1$d </b> matching location(s) rendered successfully"</string>
+    <string name="on_cancel_adding_location">Cancel adding location</string>
+    <string name="error_rendering_profile">Error rendering profile</string>
+    <string name="questionnaire_submission_confirmation_message">Are you sure you want to submit?</string>
+    <string name="questionnaire_submission_confirmation_title">You are about to submit</string>
+    <string name="pause_action_text">Pause</string>
+    <string name="stop_action_text">Stop</string>
+    <string name="resume_action_text">Resume</string>
+    <string name="start_action_text">Start</string>
+    <string name="record_action_text">Record</string>
+    <string name="edit_action_text">Edit</string>
+    <string name="record_audio_denied">Record audio permission is required for speech to text. You enable it through your device settings.</string>
+    <string name="processing">Processing</string>
+    <string-array name="processing_progress">
+        <item> </item>
+        <item>.</item>
+        <item>..</item>
+        <item>\u2026</item>
+    </string-array>
+    <string name="listening">Listening\u2026</string>
+    <string name="sync_counter"><b>Sync %1$d</b> of <b>%2$d </b></string>
+    <string name="record_audio_error">Error initializing audio record</string>
+    <string name="no_encounter_data_available">No data available</string>
+    <string name="no_data_available_for_period">No data available for this period</string>
+    <string name="reports_suffix">Reports</string>
+    <string name="external_app_not_installed">The app is not installed. Please contact your administrator.</string>
+    <string name="external_app_invalid_config">Invalid app configuration. Please contact your administrator.</string>
+    <string name="login_device_not_allowed">This phone cannot be used with this account: the account is linked to another phone, or this phone has been blocked. Ask your administrator.</string>
+    <!-- Audio answer recorder (AudioRecorderViewHolderFactory) and drafts -->
+    <string name="save_draft">Save draft</string>
+    <string name="audio_record">Record</string>
+    <string name="audio_record_again">Record again</string>
+    <string name="audio_stop">Stop</string>
+    <string name="audio_play">Play</string>
+    <string name="audio_pause">Pause</string>
+    <string name="audio_delete">Delete</string>
+    <string name="audio_hint">Tap the microphone to start recording (up to %1$d min).</string>
+    <string name="audio_recording">Recording… tap the red button to stop.</string>
+    <string name="audio_recorded">Saved recording · %1$s · tap Play to listen, or the microphone to record again.</string>
+    <string name="audio_permission_needed">Allow microphone access, then tap Record again.</string>
+    <string name="audio_failed">Could not record audio on this phone.</string>
+    <string name="quiz_time_up">Time is up. Your answers are being submitted.</string>
+</resources>

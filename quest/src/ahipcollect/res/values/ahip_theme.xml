@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AHIP brand colours (see AhipColors in AhipTheme.kt). -->
+    <color name="ahip_navy">#14246B</color>
+    <color name="ahip_green">#1E9B2E</color>
+    <color name="ahip_purple">#6F1A78</color>
+
+    <!-- Re-brand the shared OpenSRP theme (questionnaire screens, status bar, dialogs). -->
+    <color name="colorPrimary">@color/ahip_navy</color>
+    <color name="colorPrimaryDark">@color/ahip_navy</color>
+    <color name="colorAccent">@color/ahip_green</color>
+    <color name="login_primary">@color/ahip_green</color>
+
+    <!-- Questionnaire buttons: green, rounded, like the AHIP Collect mockups. -->
+    <style name="AppTheme.QuestionnaireSubmitButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:text">@string/ahip_submit</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/ahip_green</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <style name="AppTheme.QuestionnaireButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/ahip_green</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <!-- Rounded corners on photo previews (attachment_photo_preview.xml). -->
+    <style name="AhipRoundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!-- Audio recorder colours (AudioRecorderViewHolderFactory). -->
+    <color name="audio_record_idle">@color/ahip_navy</color>
+    <color name="audio_wave_active">@color/ahip_green</color>
+</resources>

@@ -1,0 +1,1673 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "ahip-t4-routine-indicators",
+  "name": "ahip_t4_routine_indicators",
+  "title": "Tool 4: High-Level Routine Indicators",
+  "status": "active",
+  "subjectType": [
+    "Location"
+  ],
+  "description": "Afya-Tek Phase III Baseline Assessment — Baseline Indicator Data Collection Tool. Reporting timeline: 1 July 2025 to 30 June 2026.",
+  "extension": [
+    {
+      "url": "https://smartregister.org/allow-incomplete-submission-when",
+      "valueExpression": {
+        "language": "text/fhirpath",
+        "expression": "repeat(item).where(linkId='collection_mode').answer.value.code = 'record_the_interview_as_audio' and repeat(item).where(linkId='interview_audio_1').answer.exists() and repeat(item).where(linkId='interview_notes').answer.exists()"
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "s0",
+      "text": "Data Collection Details",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "ahip-study",
+          "text": "Study",
+          "type": "string",
+          "readOnly": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "ahip-assessment",
+          "text": "Assessment",
+          "type": "string",
+          "readOnly": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "collection_mode",
+          "text": "How will you collect this interview?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "answer_the_questions_on_the_phone",
+                "display": "Answer the questions on the phone"
+              },
+              "initialSelected": true
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:answer",
+                "code": "record_the_interview_as_audio",
+                "display": "Record the interview as audio"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "purpose",
+          "text": "Purpose: collect actual baseline values for selected Phase III indicators from routine data sources for July 2025 - June 2026. Enter the actual number, numerator/denominator where applicable, and the verified baseline value.",
+          "type": "display"
+        },
+        {
+          "linkId": "region",
+          "text": "Region",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "dodoma",
+                "display": "Dodoma"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "tanga",
+                "display": "Tanga"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "ruvuma",
+                "display": "Ruvuma"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "njombe",
+                "display": "Njombe"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "pwani",
+                "display": "Pwani"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "mbeya",
+                "display": "Mbeya"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "tabora",
+                "display": "Tabora"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "lindi",
+                "display": "Lindi"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:region",
+                "code": "other",
+                "display": "Other (not in list)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "region_other",
+          "text": "Region name (not in the list)",
+          "type": "string",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "region",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:region",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "council",
+          "text": "District Council",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "chemba_dc",
+                "display": "Chemba DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "tanga_cc",
+                "display": "Tanga CC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "pangani_dc",
+                "display": "Pangani DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "handeni_dc",
+                "display": "Handeni DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "songea_mc",
+                "display": "Songea MC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "songea_dc",
+                "display": "Songea DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "njombe_tc",
+                "display": "Njombe TC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "makambako_dc",
+                "display": "Makambako DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "kibaha_mc",
+                "display": "Kibaha MC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "rufiji_dc",
+                "display": "Rufiji DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "mbeya_cc",
+                "display": "Mbeya CC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "busokelo_dc",
+                "display": "Busokelo DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "nzega_dc",
+                "display": "Nzega DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "mtama_dc",
+                "display": "Mtama DC"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "urn:ahip:council",
+                "code": "other",
+                "display": "Other (not in list)"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "chemba_dc",
+                    "display": "Chemba DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'dodoma'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "tanga_cc",
+                    "display": "Tanga CC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "pangani_dc",
+                    "display": "Pangani DC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "handeni_dc",
+                    "display": "Handeni DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'tanga'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "songea_mc",
+                    "display": "Songea MC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "songea_dc",
+                    "display": "Songea DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'ruvuma'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "njombe_tc",
+                    "display": "Njombe TC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "makambako_dc",
+                    "display": "Makambako DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'njombe'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "kibaha_mc",
+                    "display": "Kibaha MC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "rufiji_dc",
+                    "display": "Rufiji DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'pwani'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "mbeya_cc",
+                    "display": "Mbeya CC"
+                  }
+                },
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "busokelo_dc",
+                    "display": "Busokelo DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'mbeya'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "nzega_dc",
+                    "display": "Nzega DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'tabora'"
+                  }
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression",
+              "extension": [
+                {
+                  "url": "option",
+                  "valueCoding": {
+                    "system": "urn:ahip:council",
+                    "code": "mtama_dc",
+                    "display": "Mtama DC"
+                  }
+                },
+                {
+                  "url": "expression",
+                  "valueExpression": {
+                    "language": "text/fhirpath",
+                    "expression": "%resource.repeat(item).where(linkId='region').answer.value.code = 'lindi'"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "council_other",
+          "text": "District / council name (not in the list)",
+          "type": "string",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "council",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:council",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "collection_date",
+          "text": "Date of data collection",
+          "type": "date",
+          "required": true
+        },
+        {
+          "linkId": "collector",
+          "text": "Name of data collector",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "position",
+          "text": "Position/Office",
+          "type": "string"
+        },
+        {
+          "linkId": "collector_phone",
+          "text": "Phone number",
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/regex",
+              "valueString": "^(\\+?255|0)[0-9]{9}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "interview_recording",
+      "text": "Interview recording",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "interview_recording_note",
+          "text": "Record the interview below. If it is interrupted, record the rest as Part 2. Then write what the respondent said in the box under the recording. The questions on the next pages are optional when you record: answer any you can, then submit.",
+          "type": "display"
+        },
+        {
+          "linkId": "interview_audio_1",
+          "text": "Interview recording (part 1)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "audio-recorder"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "audio/mp4"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 47185920
+            },
+            {
+              "url": "https://smartregister.org/audio-max-duration-minutes",
+              "valueInteger": 45
+            }
+          ],
+          "required": true
+        },
+        {
+          "linkId": "interview_audio_2",
+          "text": "Interview recording (part 2, optional)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "audio-recorder"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "audio/mp4"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 47185920
+            },
+            {
+              "url": "https://smartregister.org/audio-max-duration-minutes",
+              "valueInteger": 45
+            }
+          ]
+        },
+        {
+          "linkId": "interview_notes",
+          "text": "Summary of the recorded interview: write what the respondent said",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "collection_mode",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:ahip:answer",
+            "code": "record_the_interview_as_audio"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "s1",
+      "text": "Section 1: Baseline Indicator Values",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "s1_note",
+          "text": "Record values exactly as reported in the identified source. For rate/percentage indicators capture both numerator and denominator where available. For count indicators, enter the actual count and repeat the verified figure as the baseline value.",
+          "type": "display"
+        },
+        {
+          "linkId": "ind01",
+          "prefix": "1.",
+          "text": "Adolescent pregnancy rate (percentage of women aged 10-19 years) in selected district councils — Unit: Percentage (%)",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind01_numerator",
+              "text": "Numerator / actual number: No. of pregnancies among girls aged 10-19",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind01_denominator",
+              "text": "Denominator: Relevant denominator used by source",
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind01_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind01_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "DHIS2"
+                }
+              ]
+            },
+            {
+              "linkId": "ind01_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind01_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind02",
+          "prefix": "2.",
+          "text": "Under-five mortality rate in selected district councils — Unit: Per 1,000 live births",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind02_numerator",
+              "text": "Numerator / actual number: No. of deaths among children under five",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind02_denominator",
+              "text": "Denominator: No. of live births",
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind02_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind02_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "DHIS2"
+                }
+              ]
+            },
+            {
+              "linkId": "ind02_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind02_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind03",
+          "prefix": "3.",
+          "text": "Neonatal mortality rate in selected district council — Unit: Per 1,000 live births",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind03_numerator",
+              "text": "Numerator / actual number: No. of neonatal deaths (0-28 days)",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind03_denominator",
+              "text": "Denominator: No. of live births",
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind03_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind03_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "DHIS2"
+                }
+              ]
+            },
+            {
+              "linkId": "ind03_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind03_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind04",
+          "prefix": "4.",
+          "text": "Maternal mortality rate in selected district councils — Unit: Per 100,000 live births",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind04_numerator",
+              "text": "Numerator / actual number: No. of maternal deaths",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind04_denominator",
+              "text": "Denominator: No. of live births",
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind04_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind04_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "DHIS2"
+                }
+              ]
+            },
+            {
+              "linkId": "ind04_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind04_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind05",
+          "prefix": "5.",
+          "text": "Number of new tuberculosis cases occurring per 100,000 population per year — Unit: Per 100,000 population",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind05_numerator",
+              "text": "Numerator / actual number: No. of newly identified TB cases",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind05_denominator",
+              "text": "Denominator: Total population",
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind05_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind05_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "ETL - DHIS2"
+                }
+              ]
+            },
+            {
+              "linkId": "ind05_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind05_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind06",
+          "prefix": "6.",
+          "text": "Number of TB cases recorded at health facilities — Unit: Number",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind06_numerator",
+              "text": "Numerator / actual number: Actual number of TB cases",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind06_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind06_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "ETL - DHIS2"
+                }
+              ]
+            },
+            {
+              "linkId": "ind06_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind06_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind07",
+          "prefix": "7.",
+          "text": "Number of TB cases at the health facilities referred by CHWs — Unit: Number",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind07_numerator",
+              "text": "Numerator / actual number: Actual number of TB cases referred by CHWs",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind07_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind07_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "UCS dashboard"
+                }
+              ]
+            },
+            {
+              "linkId": "ind07_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind07_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind08",
+          "prefix": "8.",
+          "text": "Number of mental health cases recorded at facilities — Unit: Number",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "ind08_numerator",
+              "text": "Numerator / actual number: Actual number of mental health cases",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind08_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind08_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Social Welfare Office"
+                }
+              ]
+            },
+            {
+              "linkId": "ind08_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind08_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind09",
+          "prefix": "9.",
+          "text": "Number of RoC referred by CHWs and receiving diabetes care at health facilities (Kibaha Municipal only) — Unit: Number",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "council",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "kibaha_mc"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "ind09_numerator",
+              "text": "Numerator / actual number: Actual number of clients receiving diabetes care at the HF",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind09_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind09_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "GoTHOMIS"
+                }
+              ]
+            },
+            {
+              "linkId": "ind09_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind09_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ind10",
+          "prefix": "10.",
+          "text": "Number of RoC referred by CHWs and receiving hypertension care at health facilities (Kibaha Municipal only) — Unit: Number",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "council",
+              "operator": "=",
+              "answerCoding": {
+                "system": "urn:ahip:answer",
+                "code": "kibaha_mc"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "ind10_numerator",
+              "text": "Numerator / actual number: Actual number of clients receiving hypertension care at the HF",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind10_baseline",
+              "text": "Verified baseline value",
+              "type": "decimal",
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "linkId": "ind10_source",
+              "text": "Data source",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "GoTHOMIS"
+                }
+              ]
+            },
+            {
+              "linkId": "ind10_comments",
+              "text": "Comments / verification",
+              "type": "text"
+            },
+            {
+              "linkId": "ind10_comments_audio",
+              "text": "Audio recording of the answer (optional)",
+              "type": "attachment",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "audio-recorder"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+                  "valueCode": "audio/mp4"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+                  "valueDecimal": 15728640
+                },
+                {
+                  "url": "https://smartregister.org/audio-max-duration-minutes",
+                  "valueInteger": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "s2",
+      "text": "Section 2: Data Verification",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "source_document",
+          "text": "Source document/report reviewed",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "reporting_period",
+          "text": "Reporting period confirmed",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "July 2025 - June 2026"
+            }
+          ]
+        },
+        {
+          "linkId": "verifier_name",
+          "text": "Name of person verifying data",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "verifier_designation",
+          "text": "Designation",
+          "type": "string"
+        },
+        {
+          "linkId": "verification_date",
+          "text": "Date",
+          "type": "date",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "photos",
+      "text": "Photos",
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "page"
+              }
+            ]
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "photos_note",
+          "text": "Take a photo of the premises / facility (e.g. the signboard or the front of the building). Add a second photo if useful.",
+          "type": "display"
+        },
+        {
+          "linkId": "photo_1",
+          "text": "Photo 1",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/jpeg"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/png"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 10485760
+            }
+          ]
+        },
+        {
+          "linkId": "photo_2",
+          "text": "Photo 2 (optional)",
+          "type": "attachment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/jpeg"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
+              "valueCode": "image/png"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxSize",
+              "valueDecimal": 10485760
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="menu_text_style" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Menu">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:listDivider">@color/white_slightly_opaque</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="questionnaire_theme">@style/AppTheme.Questionnaire</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">8dp</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#f40</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#09f</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorOnPrimary">@color/colorPrimary</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.Questionnaire" parent="Theme.Questionnaire">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="questionnaireSubmitButtonStyle">@style/AppTheme.QuestionnaireSubmitButtonStyle</item>
+        <item name="questionnaireButtonStyle">@style/AppTheme.QuestionnaireButtonStyle</item>
+        <item name="questionnaireCancelButtonStyle">@style/AppTheme.QuestionnaireCancelButtonStyle</item>
+        <item name="questionnaireGroupTypeQuestionTextStyle">@style/TextAppearance.Material3.HeadlineMedium</item>
+        <item name="questionnaireQuestionTextStyle">@style/TextAppearance.Material3.BodyLarge</item>
+        <item name="questionnaireMediaImageStyle">@style/AppTheme.MediaImageStyle</item>
+        <item name="questionnaireHelpHeaderStyle">@style/AppTheme.HelpHeaderStyle</item>
+        <item name="questionnaireNextButtonCircularProgressIndicatorStyle">@style/AppTheme.NextButtonCircularProgressIndicatorStyle</item>
+        <!-- Help card container color -->
+        <item
+            name="android:colorBackground"
+            >@color/background_neutral_100</item>
+        <item name="colorOnBackground">@color/onBackground_neutral_10</item>
+        <item name="colorSurface">@color/surface_neutral_100</item>
+        <item name="colorOnSurface">@color/onSurface_neutral_10</item>
+        <item
+            name="colorSurfaceVariant"
+            >@color/surfaceVariant_neutral_variant_90</item>
+        <item
+            name="colorOnSurfaceVariant"
+            >@color/onSurfaceVariant_neutral_variant_30</item>
+        <!-- /Help card container color -->
+    </style>
+
+    <style name="AppTheme.NextButtonCircularProgressIndicatorStyle" parent="Questionnaire.NextButtonCircularProgressIndicatorStyle">
+        <item name="indicatorColor">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="AppTheme.QuestionnaireSubmitButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:text">@string/str_save</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.QuestionnaireButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.QuestionnaireCancelButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.MediaImageStyle" parent="">
+        <item name="android:layout_gravity">center</item>
+        <item
+            name="android:layout_marginTop"
+            >@dimen/item_media_image_margin_vertical</item>
+        <item
+            name="android:layout_marginBottom"
+            >@dimen/item_media_image_margin_vertical</item>
+    </style>
+
+    <style name="AppTheme.HelpHeaderStyle" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:visibility">invisible</item>
+        <item name="android:height">0dp</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- MATERIAL DESIGN TYPOGRAPHY SCALE          -->
+    <!-- ========================================== -->
+    <!--
+    Based on Material Design 3 Typography Scale:
+    - Headline: Large, Medium, Small
+    - Display: Large, Medium, Small
+    - Body: Large, Medium, Small
+    - Label: Large, Medium, Small
+
+    Each category provides clean, standard typography without style combinations.
+    -->
+
+    <!-- ======================================== -->
+    <!-- DISPLAY STYLES                          -->
+    <!-- ======================================== -->
+
+    <style name="Display_Large">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.DisplayLarge</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Display_Medium">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.DisplayMedium</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Display_Small">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.DisplaySmall</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <!-- ======================================== -->
+    <!-- HEADLINE STYLES                         -->
+    <!-- ======================================== -->
+
+    <style name="Headline_Large">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.HeadlineLarge</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Headline_Medium">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.HeadlineMedium</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Headline_Small">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.HeadlineSmall</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <!-- ======================================== -->
+    <!-- BODY STYLES                             -->
+    <!-- ======================================== -->
+
+    <style name="Body_Extra_Extra_Large">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyExtraExtraLarge</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyExtraExtraLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Body_Extra_Large">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyExtraLarge</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyExtraLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Body_Large">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.BodyLarge</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Body_Large_Bold">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyLarge_Bold</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyLarge_Bold" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Body_Large_Blue">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyLarge_Blue</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyLarge_Blue" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">#006BBA</item>
+    </style>
+
+    <style name="Body_Large_Italic">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyLarge_Italic</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyLarge_Italic" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="Body_Large_Bold_Blue">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyLarge_Bold_Blue</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyLarge_Bold_Blue" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#006BBA</item>
+    </style>
+
+    <style name="Body_Large_Bold_Italic">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyLarge_Bold_Italic</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyLarge_Bold_Italic" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="Body_Large_Blue_Italic">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyLarge_Blue_Italic</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyLarge_Blue_Italic" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">#006BBA</item>
+    </style>
+
+    <style name="Body_Large_Bold_Blue_Italic">
+        <item name="questionnaire_textAppearance">@style/CustomTextAppearance_BodyLarge_Bold_Blue_Italic</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="CustomTextAppearance_BodyLarge_Bold_Blue_Italic" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">#006BBA</item>
+    </style>
+
+    <style name="Body_Medium">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Body_Small">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.BodySmall</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <!-- ======================================== -->
+    <!-- LABEL STYLES                            -->
+    <!-- ======================================== -->
+
+    <style name="Label_Large">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Label_Medium">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.LabelMedium</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+    <style name="Label_Small">
+        <item name="questionnaire_textAppearance">@style/TextAppearance.Material3.LabelSmall</item>
+        <item name="questionnaire_background">?attr/colorSurface</item>
+    </style>
+
+</resources>

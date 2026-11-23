@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Audio recorder (AudioRecorderViewHolderFactory); flavors may override. -->
+    <color name="audio_record_idle">#14246B</color>
+    <color name="audio_recording">#D32F2F</color>
+    <color name="audio_wave_active">#1E9B2E</color>
+    <color name="audio_wave_inactive">#C9CEDB</color>
+    <color name="audio_timer_text">#10183A</color>
+</resources>

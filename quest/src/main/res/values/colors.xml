@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="_80000000">#80000000</color>
+    <!-- Main action colour on the login and PIN screens; flavors may override it. -->
+    <color name="login_primary">#0077CC</color>
+    <color name="login_title">#0B2A4A</color>
+    <color name="login_accent">#0077CC</color>
+</resources>
